@@ -1,0 +1,5 @@
+MySQLConfiguration.php
+MongoConfiguration.php
+keys/*
+app.config.php
+mu-*
