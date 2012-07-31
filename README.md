@@ -6,6 +6,11 @@ Quick Start
 
 Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
 
+Bugs & Feature Requests
+-----------------------
+
+Create issues on GitHub (https://github.com/nodesocket/commando/issues).
+
 Versioning
 ----------
 
@@ -22,11 +27,6 @@ And constructed with the following guidelines:
 * Bug fixes and misc changes bumps the patch
 
 For more information on semantic versioning, visit http://semver.org/.
-
-Bugs & Feature Requests
------------------------
-
-Create issues (https://github.com/nodesocket/commando/issues) here on GitHub.
 
 Contact
 -------
