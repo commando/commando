@@ -20,7 +20,7 @@
 		const username = "";
 		const password = '';
 		const database = "";
-		const port = null;
+		const port = 3306;
 		const socket = null;
 	}
 ?>
