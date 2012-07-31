@@ -6,6 +6,24 @@ Quick Start
 
 Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
 
+Requirements
+------------
+
+### PHP ####
+**5.3.0** or greater.
+
+#### PHP Extensions ####
+**mysqli**
+**json**
+**mongo** (https://github.com/mongodb/mongo-php-driver)
+**ssh2** (http://pecl.php.net/package/ssh2)
+
+#### MySQL####
+Version **5.0** or greater running the **InnoDB** storage engine. MyISAM is not supported.
+
+#### MongoDB ####
+Version **2.0** or greater is highly recommended. Older versions of MongoDB may work.
+
 Bugs & Feature Requests
 -----------------------
 
