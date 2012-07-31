@@ -17,7 +17,7 @@
 		
 	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
 	
-	require_once(dirname(__FILE__) . "/markdown/markdown.php");
+	require_once(__DIR__ . "/markdown/markdown.php");
 	
 	Functions::check_required_parameters(array($_GET['param1']));
 	

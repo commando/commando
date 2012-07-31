@@ -61,7 +61,8 @@
       
       <div class="row">
    	  	<div class="span12 well">
-   	 		<a href="/execution-history" class="btn btn-primary btn-large"><i class="icon-time icon-white"></i> Execution History</a>
+   	  		<!-- Not implemented yet -->
+   	 		<!-- <a href="/execution-history" class="btn btn-primary btn-large"><i class="icon-time icon-white"></i> Execution History</a> -->
 			<div style="float: right">	
 				<div class="input-prepend" style="float: right">
 					<span class="add-on">

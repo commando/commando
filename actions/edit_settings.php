@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 	
-	require_once(dirname(dirname(__FILE__)) . "/classes/Requires.php");
+	require_once(dirname(__DIR__) . "/classes/Requires.php");
 	
 	$data = array("default_ssh_username" => $_POST['default_ssh_username'],
 				  "default_ssh_port" => $_POST['default_ssh_port'],

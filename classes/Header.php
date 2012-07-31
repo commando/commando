@@ -62,7 +62,7 @@
 					    	////
 		        			//Make sure the CSS file exists
 		        			////
-		        			if(file_exists(dirname(dirname(__FILE__)) . "/css/" . $additional_css_file . ".css")) {
+		        			if(file_exists(dirname(__DIR__) . "/css/" . $additional_css_file . ".css")) {
 		        				$output .= '<link href="/css/' . $additional_css_file . '.css" rel="stylesheet">';
 		        			} else {
 		        				Error::halt(404, 'not found', 'The included CSS file \'/css/' . $additional_css_file . '.css\' does not exist.');

@@ -18,7 +18,7 @@
 	////
 	//	Load requires
 	////
-	require_once(dirname(__FILE__) . "/classes/Requires.php");
+	require_once(__DIR__ . "/classes/Requires.php");
 	
 	////
 	// Parse uri and return the request array
@@ -29,7 +29,7 @@
 	// No request passed, require index page
 	////
 	if(empty($request)) {
-		require_once(dirname(__FILE__) . "/index.php");
+		require_once(__DIR__ . "/index.php");
 	}
 	else {
 		////
@@ -53,7 +53,7 @@
 			$_GET['param' . $i] = $request[$i];
 		}
 		
-		if(!@include_once(dirname(__FILE__) . "/" . $page)) {
+		if(!@include_once(__DIR__ . "/" . $page)) {
 			Error::halt(404, 'not found', 'File \'' . $page . '\' does not exist.');
 		}
 	}

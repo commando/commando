@@ -63,7 +63,7 @@
         			////
         			//Check to make sure the JavaScript file exists
         			////
-        			if(file_exists(dirname(dirname(__FILE__)) . "/js/" . $additional_js_file . ".js")) {
+        			if(file_exists(dirname(__DIR__) . "/js/" . $additional_js_file . ".js")) {
         				echo '<script type="text/javascript" src="/js/' . $additional_js_file . '.js"></script>';
         			} else {
         				Error::halt(404, 'not found', 'The included JavaScript file \'/js/' . $additional_js_file . '.js\' does not exist.');

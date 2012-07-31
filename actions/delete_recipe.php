@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 	
-	require_once(dirname(dirname(__FILE__)) . "/classes/Requires.php");
+	require_once(dirname(__DIR__) . "/classes/Requires.php");
 	
 	Functions::check_required_parameters(array($_GET['id']));
 	
