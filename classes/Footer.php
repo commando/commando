@@ -19,8 +19,8 @@
 		public static function render(array $additional_js_files = array()) {
 			echo '<hr>
 				  <footer>
-        		  	<p style="float: left;">Copyright &copy; ' . date("Y") . ' <a href="http://commando.io">Commando.io</a>. All rights reserved.<br />Created by <a href="http://www.nodesocket.com">NodeSocket</a> LLC.</p>
-        		  	<p style="float: right;">v' . Version::current . '</p>
+        		  	<p style="float: left;">Copyright &copy; ' . date("Y") . ' <a href="http://www.nodesocket.com">NodeSocket</a> LLC.</p>
+        		  	<p style="float: right;">v' . Version::current . ' (<a href="https://github.com/nodesocket/commando">GitHub</a>).</p>
       			  </footer>
       		     </div>';
         
