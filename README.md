@@ -4,7 +4,7 @@ Commando.io
 Quick Start
 -----------
 
-Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/zipball/master).
+Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
 
 Versioning
 ----------
