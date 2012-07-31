@@ -13,10 +13,10 @@ Requirements
 **5.3.0** or greater.
 
 #### PHP Extensions ####
-**mysqli**
-**json**
-**mongo** (https://github.com/mongodb/mongo-php-driver)
-**ssh2** (http://pecl.php.net/package/ssh2)
++ **mysqli**
++ **json**
++ **mongo** (https://github.com/mongodb/mongo-php-driver)
++ **ssh2** (http://pecl.php.net/package/ssh2)
 
 #### MySQL####
 Version **5.0** or greater running the **InnoDB** storage engine. MyISAM is not supported.
@@ -40,9 +40,9 @@ Releases will be numbered with the follow format:
 
 And constructed with the following guidelines:
 
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
++ Breaking backward compatibility bumps the major (and resets the minor and patch)
++ New additions without breaking backward compatibility bumps the minor (and resets the patch)
++ Bug fixes and misc changes bumps the patch
 
 For more information on semantic versioning, visit http://semver.org/.
 
