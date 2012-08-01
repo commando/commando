@@ -1,7 +1,7 @@
 .CodeMirror {
   line-height: 1em;
   font-family: monospace;
-
+  
   font-size: 14px;
   border: 1px solid #dddddd;
   -webkit-border-radius: 4px;
@@ -9,7 +9,7 @@
   border-radius: 4px;
   padding: 1px;
   margin-left: 0px;
-
+  
   /* Necessary so the scrollbar can be absolutely positioned within the wrapper on Lion. */
   position: relative;
   /* This prevents unwanted scrollbars from showing up on the body and wrapper in IE. */
@@ -78,10 +78,6 @@
   padding: .4em;
   white-space: pre;
   cursor: text;
-}
-.CodeMirror-lines * {
-  /* Necessary for throw-scrolling to decelerate properly on Safari. */
-  pointer-events: none;
 }
 
 .CodeMirror pre {
@@ -175,5 +171,16 @@ span.cm-em {font-style: italic;}
 span.cm-emstrong {font-style: italic; font-weight: bold;}
 span.cm-link {text-decoration: underline;}
 
+span.cm-invalidchar {color: #f00;}
+
 div.CodeMirror span.CodeMirror-matchingbracket {color: #0f0;}
 div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
+
+@media print {
+
+  /* Hide the cursor when printing */
+  .CodeMirror pre.CodeMirror-cursor {
+    visibility: hidden;
+  }
+
+}
