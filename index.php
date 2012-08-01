@@ -22,6 +22,9 @@
 	
 	Navigation::render("dashboard");
 ?>
+ 	
+ 	<a href="https://github.com/nodesocket/commando"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 99999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+ 
     <div class="container">
 
       <div class="hero-unit">
@@ -49,11 +52,15 @@
        <div class="row">
         <div class="span12 well" style="width: 1130px">
           <h1 style="margin-bottom: 10px;">Commando.io Contacts</h1>
-          <h3><a href="http://commando.io">http://commando.io</a></h3>
-		  <h3><a href="mailto:commando@nodesocket.com">commando@nodesocket.com</a></h3>
-		  <h3 style="margin-bottom: 6px;"><a href="https://github.com/nodesocket/commando">https://github.com/nodesocket/commando</a></h3>
-		  <h3><a href="https://twitter.com/commando_io" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @commando_io</a></h3>
-		  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <div style="float: left;">
+          	<p><a href="http://commando.io">http://commando.io</a></p>
+		  	<p><a href="mailto:commando@nodesocket.com">commando@nodesocket.com</a></p>
+		  	<p style="margin-bottom: 6px;"><a href="https://github.com/nodesocket/commando">https://github.com/nodesocket/commando</a></p>
+          </div>
+          <div style="float: right;">
+          	<p><a href="https://twitter.com/commando_io" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @commando_io</a></p>
+		  	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
         </div>
       </div>
 <?php
