@@ -20,7 +20,7 @@
 			echo '<hr>
 				  <footer>
         		  	<p style="float: left;">Copyright &copy; ' . date("Y") . ' <a href="http://www.nodesocket.com">NodeSocket</a> LLC.</p>
-        		  	<p style="float: right;">v' . Version::current . ' (<a href="https://github.com/nodesocket/commando">GitHub</a>).</p>
+        		  	<p style="float: right;">v' . Version::current . ' View on <a href="https://github.com/nodesocket/commando">GitHub</a>.</p>
       			  </footer>
       		     </div>';
         
