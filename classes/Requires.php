@@ -16,7 +16,7 @@
 	*/
 	
  	class Requires {
- 		static function auto_load() {
+ 		static function autoload() {
  			require_once(dirname(__DIR__) . "/app.config.php");
  			
  			spl_autoload_register(function($class_name) {
@@ -25,5 +25,5 @@
  		}
  	}
 	
-	Requires::auto_load();
+	Requires::autoload();
 ?>

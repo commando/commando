@@ -1,6 +1,6 @@
 <?php
 	////
-	//	Load Functions class
+	// Require Functions class
 	////
 	require_once(__DIR__ . "/classes/Functions.php");
 	
