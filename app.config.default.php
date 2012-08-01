@@ -16,11 +16,11 @@
 	*/
 	
 	////
-	// Minimum seed length is 30 characters (enforced)
+	// Minimum seed length is 64 characters (enforced)
 	//
  	// Do not change once set
  	////	
- 	define("CRYPTO_SEED", "");
+ 	define("CRYPTO_SEED", "{{CRYPTO_SEED}}");
  	
  	////
  	// Example output: 4/1/2012 4:23:35 PM
@@ -38,9 +38,9 @@
  	define("SSH_PRIVATE_KEY_PATH", __DIR__ . "/keys/private-key");
  	
  	////
- 	// Make sure CRYPTO_SEED is set, and at least 30 characters in length
+ 	// Make sure CRYPTO_SEED is set, and at least 64 characters in length
  	////
- 	if(!defined("CRYPTO_SEED") || strlen(CRYPTO_SEED) < 30) {
- 		Error::halt(409, 'conflict', 'The crypto seed defined in \'app.config.php\' must be configured, and at least 30 characters in length.');
+ 	if(!defined("CRYPTO_SEED") || strlen(CRYPTO_SEED) < 64) {
+ 		Error::halt(409, 'conflict', 'The crypto seed defined in \'app.config.php\' must be configured, and at least 64 characters in length.');
  	}
 ?>
