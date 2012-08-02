@@ -19,7 +19,7 @@
 		const hosts = "";
 		const username = "";
 		const password = '';
-		const database = "";
+		const database = "commando";
 		const port = 27017;
 	}
 ?>

@@ -79,7 +79,7 @@
 		////
 		// Options
 		// 		safe (int | 'majority'): Number of servers that have to successfully acknowledge the write before returning success. Majority automagically calculates the number of servers needed for a majority.
-		//		fsync (bool): Force the database to fsync all writes up to this point to disk (by default, MongoDB fsyncs writes once per minute). Don't enable this unless you have a damn good reason, it murders performance.
+		//		fsync (bool): Force the database to fsync all writes up to this point to disk (by default, MongoDB fsyncs writes once per minute). Don't enable this unless you have a good reason, it kills performance.
 		////
 		public static function insert(Array $data, Array $options = array("safe" => 1, "fsync" => false)) {
 			try {

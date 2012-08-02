@@ -19,7 +19,7 @@
 		const host = "";
 		const username = "";
 		const password = '';
-		const database = "";
+		const database = "commando";
 		const port = 3306;
 		const socket = null;
 	}

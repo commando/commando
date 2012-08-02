@@ -18,15 +18,27 @@ Quick Start
 + Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
 + Execute `install.php`. *The script requires write access to the filesystem to copy and update configuration files.*
 + Add the public and private SSH keys you wish to connect with to the `/keys` directory.
-+ Edit `app.config.php` and provide the correct paths for
++ Edit `app.config.php` and provide the correct paths for:
 
-    `SSH_PUBLIC_KEY_PATH`
+    `SSH_PUBLIC_KEY_PATH`<br />
     `SSH_PRIVATE_KEY_PATH`
     
 + Edit `/classes/MySQLConfiguration.php` and provide connection details to MySQL.
 + Edit `/classes/MongoConfiguration.php` and provide connection details to MongoDB.
 
-*For quality MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
+*If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
+
++ Import the MySQL schema located in `/schemas/latest.sql` into MySQL.
+
+    mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < latest.sql
+    
++ Create a database `commando` and a collection `executions` in MongoDB. Create the following standard indexes on the `executions` collection:
+   
+    { "executed" : 1}
+    { "groups" : 1}
+    { "recipes.id" : 1}
+    { "servers.id" : 1}
+    { "recipes.interpreter" : 1}
 
 Requirements
 ------------
