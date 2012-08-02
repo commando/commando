@@ -1,14 +1,16 @@
-Commando.io
-===========
-
-Dev-Ops Evolved.
----------------
+Commando.io - Dev-Ops Evolved
+-----------------------------
 
 Commando.io is a web-based interface for streamlining the use of SSH for deployments and system administration tasks across groups of remote servers.
 
 GitHub fundamentally changed the way developers use revision control by creating a beautiful user interface and social platform. Commando.io does the same for managing servers & dev-op tasks.
 
 The fundamental goal of Commando.io is to make it super simple to execute commands on a group of servers and visualize the results. Additionally Commando.io provides IT compliance and accountability, as every command executed is logged with all details such as user, date/time, and which servers. Finally all commands are versioned and centrally stored.
+
+Screenshots & Additional Details
+--------------------------------
+
+http://commando.io
 
 Quick Start
 -----------
