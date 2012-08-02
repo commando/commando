@@ -25,7 +25,7 @@
 		
 		public static function connect($replica_set = false) {
 			try {
-				MongoConnection::$mongo_connection = new Mongo("mongodb://" . MongoConfiguration::username . ":" . MongoConfiguration::password . "@" . MongoConfiguration::hosts . ":" . MongoConfiguration::port . "/" .  MongoConfiguration::database, array("timeout" => 5000, "replicaSet" => $replica_set));
+				MongoConnection::$mongo_connection = new Mongo("mongodb://" . MongoConfiguration::username . ":" . MongoConfiguration::password . "@" . MongoConfiguration::hosts . ":" . MongoConfiguration::port . "/" .  MongoConfiguration::database, array("timeout" => 10000, "replicaSet" => $replica_set));
 			} catch(Exception $mongoException) { 
 				//Output error details
 				Error::halt(503, 'service unavailable', 'Temporarily unable to process request. Failed to establish a connection with MongoDB. Please retry.');
