@@ -17,7 +17,7 @@ Installation
 
 1.  Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
 2.  Execute `/install.php`. *The script requires write access to the filesystem to copy and update configuration files.*
-3.  Add the public and private SSH keys you wish to connect with to the `/keys` directory.
+3.  Add the public and private SSH keys you wish to connect with into the `/keys` directory.
 4.  Edit `/app.config.php` and provide the correct paths for:
 
     `SSH_PUBLIC_KEY_PATH`<br />
@@ -26,7 +26,7 @@ Installation
 5.  Edit `/classes/MySQLConfiguration.php` and provide connection details to MySQL.
 6.  Edit `/classes/MongoConfiguration.php` and provide connection details to MongoDB. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
 
-7.  Import the MySQL schema located in `/schemas/latest.sql` into MySQL.
+7.  Import the MySQL schema located in `/schema/latest.sql` into MySQL.
 
 ```` bash
 	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < latest.sql
