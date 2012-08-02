@@ -1,5 +1,5 @@
 /*
-# Copyright 2012 NodeSocket LLC
+# Copyright 2012 NodeSocket, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -106,8 +106,21 @@ function execute() {
 }
 
 $(document).ready(function() {
+	var notes = CodeMirror.fromTextArea(document.getElementById('execute-notes'), {
+		mode: 'markdown',
+		lineNumbers: false,
+		lineWrapping: false,
+		matchBrackets: false,
+		undoDepth: 250
+	});
+	
+	$(".CodeMirror").addClass("span9");
+	
 	$("#execute-groups").chosen();	
 	$("#execute-recipe").chosen();
+	
+	$("#execute-notes").next().find(".CodeMirror-scroll").css("min-height", "55px");
+	$("#execute-notes").next().find(".CodeMirror-scroll").css("max-height", "180px");
 	$("#execute-notes").autosize();
 	
 	$("#search-results").bind("keyup paste", function() {

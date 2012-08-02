@@ -1,5 +1,5 @@
 /*
-# Copyright 2012 NodeSocket LLC
+# Copyright 2012 NodeSocket, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -98,6 +98,14 @@ function validate_edit_recipe() {
 $(document).ready(function() {		
 	recipe_name_original = $("#recipe-name").val();
 	
+	var notes = CodeMirror.fromTextArea(document.getElementById('recipe-notes'), {
+		mode: 'markdown',
+		lineNumbers: false,
+		lineWrapping: false,
+		matchBrackets: false,
+		undoDepth: 250
+	});
+	
 	editor = CodeMirror.fromTextArea(document.getElementById('recipe-editor'), { 
 		lineNumbers: true,
 		lineWrapping: false,
@@ -119,6 +127,8 @@ $(document).ready(function() {
 		editor.setOption("mode", $("#recipe-interpreter").val());
 	}
 	
+	$("#recipe-notes").next().find(".CodeMirror-scroll").css("min-height", "55px");
+	$("#recipe-notes").next().find(".CodeMirror-scroll").css("max-height", "180px");
 	$("#recipe-notes").autosize();
 	
 	$("#recipe-name").bind("keyup paste", function() {

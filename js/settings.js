@@ -1,5 +1,5 @@
 /*
-# Copyright 2012 NodeSocket LLC
+# Copyright 2012 NodeSocket, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,8 +32,7 @@ $(document).ready(function() {
 	Request.ajax("/actions/get_public_ssh_key.php", {}, function(response) {
 		if(typeof response !== "undefined") {
 			$("#settings-public-ssh-key").html("");
-			$("#settings-public-ssh-key").append('<pre class="prettyprint lang-html linenums" style="display: none;"></pre>');
-			$("#settings-public-ssh-key").children("pre").html(response.public_ssh_key);
+			$("#settings-public-ssh-key").append('<pre class="prettyprint lang-html linenums" style="display: none;">' + response.public_ssh_key + '</pre>');
 			prettyPrint();
 			$("#settings-public-ssh-key").children("pre").slideDown(200);
 		}

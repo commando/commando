@@ -1,6 +1,6 @@
 <?php
 	/*
-	# Copyright 2012 NodeSocket LLC
+	# Copyright 2012 NodeSocket, LLC
 	#
 	# Licensed under the Apache License, Version 2.0 (the "License");
 	# you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@
 	}
 	
 	Header::set_title("Commando.io - Execute");
-	Header::render(array("chosen"));
+	Header::render(array("chosen", "codemirror"));
 ?>
 	<div id="execute-working" class="progress progress-striped active">
   		<div class="bar" style="width: 100%;"></div>
@@ -107,7 +107,7 @@
 		        <div class="control-group">
 			    	<label class="control-label" for="execute-notes">Notes</label>
 			    	<div class="controls">
-			    		<textarea id="execute-notes" name="notes" class="notes span9" maxlength="5000"></textarea>
+			    		<textarea id="execute-notes" name="notes"></textarea>
 			    		<p class="help-block" style="clear: both;">Optional notes and comments you wish to attach to this execution. <a href="http://daringfireball.net/projects/markdown/">Markdown</a> is supported.</p>
 			    	</div>
 			    </div>
@@ -122,5 +122,5 @@
 	  
 	  <div class="row" id="execute-results-container"></div>
 <?php
-	Footer::render(array("chosen", "highlight", "autosize", "execute"));
+	Footer::render(array("chosen", "codemirror", "highlight", "autosize", "execute"));
 ?>

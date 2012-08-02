@@ -1,6 +1,6 @@
 <?php
 	/*
-	# Copyright 2012 NodeSocket LLC
+	# Copyright 2012 NodeSocket, LLC
 	#
 	# Licensed under the Apache License, Version 2.0 (the "License");
 	# you may not use this file except in compliance with the License.
@@ -64,7 +64,7 @@
 			        <div class="control-group">
 			    		<label class="control-label" for="recipe-notes">Notes</label>
 			    		<div class="controls">
-			    			<textarea id="recipe-notes" name="notes" class="notes span9" maxlength="5000"></textarea>
+			    			<textarea id="recipe-notes" name="notes"></textarea>
 			    			<p class="help-block" style="clear: both;">Optional notes and comments you wish to attach to the recipe. <a href="http://daringfireball.net/projects/markdown/">Markdown</a> is supported.</p>
 			    		</div>
 			    	</div>

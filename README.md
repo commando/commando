@@ -1,6 +1,15 @@
 Commando.io
 ===========
 
+Dev-Ops Evolved.
+---------------
+
+Commando.io is a web-based interface for streamlining the use of SSH for deployments and system administration tasks across groups of remote servers.
+
+GitHub fundamentally changed the way developers use revision control by creating a beautiful user interface and social platform. Commando.io does the same for managing servers & dev-op tasks.
+
+The fundamental goal of Commando.io is to make it super simple to execute commands on a group of servers and visualize the results. Additionally Commando.io provides IT compliance and accountability, as every command executed is logged with all details such as user, date/time, and which servers. Finally all commands are versioned and centrally stored.
+
 Quick Start
 -----------
 
@@ -24,7 +33,7 @@ Version **5.0** or greater running the **InnoDB** storage engine. MyISAM is not 
 #### MongoDB ####
 Version **2.0** or greater is highly recommended. Older versions of MongoDB may work.
 
-Bugs & Feature Requests
+Support, Bugs, And Feature Requests
 -----------------------
 
 Create issues on GitHub (https://github.com/nodesocket/commando/issues).
@@ -56,7 +65,7 @@ Contact
 License & Legal
 ---------------
 
-Copyright 2012 NodeSocket LLC
+Copyright 2012 NodeSocket, LLC
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 

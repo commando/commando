@@ -1,6 +1,6 @@
 <?php
 	/*
-	# Copyright 2012 NodeSocket LLC
+	# Copyright 2012 NodeSocket, LLC
 	#
 	# Licensed under the Apache License, Version 2.0 (the "License");
 	# you may not use this file except in compliance with the License.
@@ -19,8 +19,14 @@
 		public static function render(array $additional_js_files = array()) {
 			echo '<hr>
 				  <footer>
-        		  	<p style="float: left;">Copyright &copy; ' . date("Y") . ' <a href="http://www.nodesocket.com">NodeSocket</a> LLC.</p>
-        		  	<p style="float: right;">v' . Version::current . ' view on <a href="https://github.com/nodesocket/commando">GitHub</a>.</p>
+        		  	<p style="float: left;">
+        		  	    Copyright &copy; ' . date("Y") . ' <a href="http://www.nodesocket.com">NodeSocket</a>, LLC.
+        		  	    <br >All rights reserved.
+        		  	</p>
+        		  	<p style="float: right;">
+        		  	    v' . Version::current . '
+        		  	    <br />View on <a href="https://github.com/nodesocket/commando">GitHub</a>.
+        		    </p>
       			  </footer>
       		     </div>';
         
@@ -52,7 +58,8 @@
         				  <script type="text/javascript" src="/js/codemirror/shell.js"></script>
         				  <script type="text/javascript" src="/js/codemirror/perl.js"></script>
         				  <script type="text/javascript" src="/js/codemirror/python.js"></script>
-        				  <script type="text/javascript" src="/js/codemirror/javascript.js"></script>';
+        				  <script type="text/javascript" src="/js/codemirror/javascript.js"></script>
+        				  <script type="text/javascript" src="/js/codemirror/markdown.js"></script>';
         		} 
         		////
         		// Handle the special case of code-pretty

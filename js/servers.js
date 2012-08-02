@@ -1,5 +1,5 @@
 /*
-# Copyright 2012 NodeSocket LLC
+# Copyright 2012 NodeSocket, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -85,15 +85,22 @@ function validate_server() {
 		var p = $(ssh_port).isEmpty();
 		
 		if(ul && !a && !u && !p) {
+			var server_modal = $("#add-server").is(":visible") ? $("#add-server") : $("#edit-server");
 			var server_form = $("#add-server").is(":visible") ? $("#form-add-server") : $("#form-edit-server");
 			
-			if($(ssh_username).val() === "root") {
-				bootbox.confirm("It is not recommended to connect with the <strong>root</strong> user for security reasons. Are you sure?", function(confirmed) {
+			if($(ssh_username).val().toLowerCase() === "root") {
+				$(server_modal).modal("hide");
+				
+				bootbox.setIcons({
+					"CONFIRM" : "icon-ok-sign icon-white"
+        		});
+				
+				bootbox.confirm("It is not recommended to SSH with the <strong>root</strong> user for security reasons. Are you sure?", function(confirmed) {
 					if(confirmed) {
 						$(server_form).submit();
 					} else {
-						$(server_form).modal("show");
 						$(".modal-footer .btn-primary").removeClass("disabled");
+						$(server_modal).modal("show");
 					}
 				});
 			} else {

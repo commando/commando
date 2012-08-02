@@ -1,6 +1,6 @@
 <?php
 	/*
-	# Copyright 2012 NodeSocket LLC
+	# Copyright 2012 NodeSocket, LLC
 	#
 	# Licensed under the Apache License, Version 2.0 (the "License");
 	# you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@
 	Navigation::render("dashboard");
 ?>
  	
- 	<a href="https://github.com/nodesocket/commando"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 99999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+ 	<a href="https://github.com/nodesocket/commando"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 99999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
  
     <div class="container">
 
@@ -50,8 +50,8 @@
       </div>
       
        <div class="row">
-        <div class="span12 well" style="width: 1130px">
-          <h1 style="margin-bottom: 10px;">Commando.io Contacts</h1>
+        <div class="span12 well" style="width: 1130px; padding-left: 45px;">
+          <h1 style="margin-bottom: 10px;">Contacts</h1>
           <div style="float: left;">
           	<p><a href="http://commando.io">http://commando.io</a></p>
 		  	<p><a href="mailto:commando@nodesocket.com">commando@nodesocket.com</a></p>
