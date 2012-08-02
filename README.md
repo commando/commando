@@ -16,23 +16,25 @@ Installation
 ------------
 
 1.  Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
-2.  Execute `/install.php`. *The script requires write access to the filesystem to copy and update configuration files.*
+2.  Execute `$ php -f install.php`. *The script requires write access to the filesystem to copy and update configuration files.*
 3.  Add the public and private SSH keys you wish to connect with into the `/keys` directory.
 4.  Edit `/app.config.php` and provide the correct paths for:
 
     `SSH_PUBLIC_KEY_PATH`<br />
     `SSH_PRIVATE_KEY_PATH`
     
-5.  Edit `/classes/MySQLConfiguration.php` and provide connection details to MySQL.
-6.  Edit `/classes/MongoConfiguration.php` and provide connection details to MongoDB. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
+5.  Create a user in MySQL to connect with.
+6.  Edit `/classes/MySQLConfiguration.php` and provide the connection details to MySQL.
+7.	Create a user in MongoDB to connect with. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
+8.  Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
 
-7.  Import the MySQL schema located in `/schema/latest.sql` into MySQL.
+9.  Import the MySQL schema located in `/schema/latest.sql` into MySQL.
 
 ```` bash
 	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < latest.sql
 ````
     
-8.  Create a database `commando` and a collection `executions` in MongoDB. Create the following standard indexes on the `executions` collection:
+10.  Create a database `commando` and a collection `executions` in MongoDB. Create the following standard indexes on the `executions` collection:
    
 ```` json
     { "executed" : 1 }
