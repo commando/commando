@@ -88,14 +88,14 @@ function validate_server() {
 			var server_modal = $("#add-server").is(":visible") ? $("#add-server") : $("#edit-server");
 			var server_form = $("#add-server").is(":visible") ? $("#form-add-server") : $("#form-edit-server");
 			
-			if($(ssh_username).val().toLowerCase() === "root") {
+			if($(server_form).attr("id") === "form-add-server" && $(ssh_username).val().toLowerCase() === "root") {
 				$(server_modal).modal("hide");
 				
 				bootbox.setIcons({
 					"CONFIRM" : "icon-ok-sign icon-white"
         		});
 				
-				bootbox.confirm("It is not recommended to SSH with the <strong>root</strong> user for security reasons. Are you sure?", function(confirmed) {
+				bootbox.confirm("It is recommended to SSH with a user other than root for security reasons. Are you sure you wish to connect with root?", function(confirmed) {
 					if(confirmed) {
 						$(server_form).submit();
 					} else {

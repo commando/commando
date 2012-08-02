@@ -56,7 +56,28 @@
 			continue;
 		}
 		
-		$result = $ssh->execute($recipe->content);
+		////
+		// Build the correct interpreter and command
+		////
+		switch($recipe->interpreter) {
+			case "shell":
+				$command = $recipe->content;
+				break;
+			case "bash":
+				$command = "bash -c $'" . str_replace("'", "\'", $recipe->content) . "'";
+				break;
+			case "perl":
+				$command = "perl -e $'" . str_replace("'", "\'", $recipe->content) . "'";
+				break;
+			case "python":
+				$command = "python -c $'" . str_replace("'", "\'", $recipe->content) . "'";
+				break;
+			case "node.js":
+				$command = "node -e $'" . str_replace("'", "\'", $recipe->content) . "'";
+				break;
+		}
+		
+		$result = $ssh->execute($command);
 		$returned_results[] = array("server" => $server->id, "server_label" => $server->label, "stream" => $result->stream, "result" => $result->result);
 	}
 	

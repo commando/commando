@@ -6,21 +6,12 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+CREATE DATABASE `commando` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `commando`;
 
 CREATE TABLE IF NOT EXISTS `groups` (
   `id` char(25) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-  `added` datetime NOT NULL,
-  `modified` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`),
-  KEY `added` (`added`),
-  KEY `modified` (`modified`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-CREATE TABLE IF NOT EXISTS `recipes` (
-  `id` char(25) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `added` datetime NOT NULL,
   `modified` datetime NOT NULL,
   PRIMARY KEY (`id`),
@@ -49,6 +40,17 @@ CREATE TABLE IF NOT EXISTS `recipe_versions` (
   KEY `added` (`added`),
   KEY `recipe` (`recipe`),
   KEY `interpreter` (`interpreter`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `recipes` (
+  `id` char(25) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `added` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  KEY `added` (`added`),
+  KEY `modified` (`modified`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `servers` (
