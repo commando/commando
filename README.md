@@ -20,11 +20,13 @@ Quick Start
 + Add the public and private SSH keys you wish to connect with to the `/keys` directory.
 + Edit `app.config.php` and provide the correct paths for
 
-    SSH_PUBLIC_KEY_PATH
-    SSH_PRIVATE_KEY_PATH
+    `SSH_PUBLIC_KEY_PATH`
+    `SSH_PRIVATE_KEY_PATH`
     
 + Edit `/classes/MySQLConfiguration.php` and provide connection details to MySQL.
-+ Edit `/classes/MongoConfiguration.php` and provide connection details to MongoDB. If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.
++ Edit `/classes/MongoConfiguration.php` and provide connection details to MongoDB.
+
+*For quality MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
 
 Requirements
 ------------
