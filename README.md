@@ -30,15 +30,19 @@ Quick Start
 
 + Import the MySQL schema located in `/schemas/latest.sql` into MySQL.
 
-    mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < latest.sql
+```` bash
+	mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < latest.sql
+````
     
 + Create a database `commando` and a collection `executions` in MongoDB. Create the following standard indexes on the `executions` collection:
    
-    { "executed" : 1}
-    { "groups" : 1}
-    { "recipes.id" : 1}
-    { "servers.id" : 1}
-    { "recipes.interpreter" : 1}
+```` son
+    { "executed" : 1 }
+    { "groups" : 1 }
+    { "recipes.id" : 1 }
+    { "servers.id" : 1 }
+    { "recipes.interpreter" : 1 }
+````
 
 Requirements
 ------------
