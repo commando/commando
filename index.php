@@ -28,7 +28,7 @@
     <div class="container">
 
       <div class="hero-unit">
-		<h2 class="headline">A better way to do <strong>dev-ops</strong>.</h2>
+		<h2 class="headline">Dev-Ops <strong>Evolved</strong>.</h2>
       </div>
 
       <div class="row">

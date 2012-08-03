@@ -31,10 +31,11 @@ Installation
 9.  Import the MySQL schema located in `/schema/latest.sql` into MySQL.
 
 ```` bash
-	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < latest.sql
+	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < /schema/latest.sql
 ````
-    
-10.  Create a database `commando` and a collection `executions` in MongoDB. Create the following standard indexes on the `executions` collection:
+
+10.	 Assign the MySQL user created above to the new database `commando`.    
+11.  Create a database `commando` and a collection `executions` in MongoDB. Create the following standard indexes on the `executions` collection:
    
 ```` json
     { "executed" : 1 }
@@ -43,6 +44,8 @@ Installation
     { "servers.id" : 1 }
     { "recipes.interpreter" : 1 }
 ````
+
+12. Assign the MongoDB user created above to the new database `commando`.
 
 Requirements
 ------------

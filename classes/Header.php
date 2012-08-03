@@ -30,7 +30,7 @@
 					    <title>' . Header::$title . '</title>
 					    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 					    <meta name="description" content="A web-based interface for streamlining the use of SSH for application deployment and system administration tasks across remote servers.">
-					    <meta name="author" content="Commando.io">
+					    <meta name="author" content="NodeSocket, LLC">
 					
 					    <link rel="shortcut icon" href="/img/favicon.ico">
 					    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-114.png">
