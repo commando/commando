@@ -10,13 +10,18 @@ The fundamental goal of Commando.io is to make it super simple to execute comman
 Screencasts, Screenshots, And Additional Details
 --------------------------------
 
-http://commando.io
+![Web servers tagged and grouped.](http://cdn.commando.io/home/images/screenshots/small/servers.png)
+![Adding a recipe.](http://cdn.commando.io/home/images/screenshots/large/add-recipe.png)
+![Executing a recipe on a group of servers.](http://cdn.commando.io/home/images/screenshots/small/execute.png)
+![A collection of various groups.](http://cdn.commando.io/home/images/screenshots/small/groups.png)
+
+**See http://commando.io for additional details.**
 
 Installation
 ------------
 
 1.  Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
-2.  Execute `$ php -f install.php`. *The script requires write access to the filesystem to copy and update configuration files.*
+2.  Execute `$ php -f install.php`, or view `/install.php` from a browser. *The install script requires write access to the filesystem to copy and update configuration files.*
 3.  Add the public and private SSH keys you wish to connect with into the `/keys` directory.
 4.  Edit `/app.config.php` and provide the correct paths for:
 
@@ -25,17 +30,15 @@ Installation
     
 5.  Create a user in MySQL to connect with.
 6.  Edit `/classes/MySQLConfiguration.php` and provide the connection details to MySQL.
-7.	Create a user in MongoDB to connect with. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
-8.  Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
-
-9.  Import the MySQL schema located in `/schema/latest.sql` into MySQL.
+7.  Import the MySQL schema located in `/schema/latest.sql` into MySQL.
 
 ```` bash
 	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < /schema/latest.sql
 ````
 
-10.	 Assign the MySQL user created above to the new database `commando`.    
-11.  Create a database `commando` and a collection `executions` in MongoDB. Create the following standard indexes on the `executions` collection:
+8.	Assign the MySQL user created above to the newly imported database `commando`.    
+9.  Create a database `commando` and a collection `executions` in MongoDB. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
+10. Create the following standard indexes on the `executions` collection:
    
 ```` json
     { "executed" : 1 }
@@ -45,13 +48,14 @@ Installation
     { "recipes.interpreter" : 1 }
 ````
 
-12. Assign the MongoDB user created above to the new database `commando`.
+11.	Create a user in MongoDB to connect with.
+12. Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
 
 Requirements
 ------------
 
 ### PHP ####
-**5.3.0** or greater.
+Version **5.3.0** or greater.
 
 #### PHP Extensions ####
 + **mysqli**
@@ -60,7 +64,7 @@ Requirements
 + **ssh2** (http://pecl.php.net/package/ssh2)
 
 #### MySQL####
-Version **5.0** or greater running the **InnoDB** storage engine. MyISAM is not supported.
+Version **5.0** or greater running the **InnoDB** storage engine. *MyISAM is not supported.*
 
 #### MongoDB ####
 Version **2.0** or greater is highly recommended. Older versions of MongoDB may work.
