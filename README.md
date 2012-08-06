@@ -11,7 +11,7 @@ Screencasts, Screenshots, And Additional Details
 --------------------------------
 
 ![Web servers tagged and grouped.](http://cdn.commando.io/home/images/screenshots/small/servers.png)
-![Adding a recipe.](http://cdn.commando.io/home/images/screenshots/large/add-recipe.png)
+![Adding a recipe.](http://cdn.commando.io/home/images/screenshots/small/add-recipe.png)
 ![Executing a recipe on a group of servers.](http://cdn.commando.io/home/images/screenshots/small/execute.png)
 ![A collection of various groups.](http://cdn.commando.io/home/images/screenshots/small/groups.png)
 
