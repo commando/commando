@@ -87,7 +87,7 @@ location ~ ^[^.]+$ {
 
 #### lighttpd ####
 ```` lighttpd
-$HTTP["host"] =~ "^(your-domain\.com)$" {
+$HTTP["host"] =~ "^(your-domain-here\.com)$" {
         url.rewrite-once = (
                 "^[^.]*$" => "controller.php/$1"
         )
