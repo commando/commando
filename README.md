@@ -1,5 +1,4 @@
-Commando.io - Dev-Ops Evolved
------------------------------
+# Commando.io - Dev-Ops Evolved #
 
 Commando.io is a web-based interface for streamlining the use of SSH for deployments and system administration tasks across groups of remote servers.
 
