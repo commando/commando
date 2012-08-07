@@ -15,32 +15,37 @@ Screenshots And Additional Details
 [ ![Executing a recipe on a group of servers.](http://cdn.commando.io/home/images/screenshots/small/execute.png) ](http://cdn.commando.io/home/images/screenshots/large/execute.png)
 [ ![A collection of various groups.](http://cdn.commando.io/home/images/screenshots/small/groups.png) ](http://cdn.commando.io/home/images/screenshots/large/groups.png)
 
-**See http://commando.io for additional details.**
+### See http://commando.io for additional details. ###
 
 Installation
 ------------
 
-1.] Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
-2.] Execute `$ php -f install.php`, or view `/install.php` from a browser. *The install script requires write access to the filesystem to copy and update configuration files.*
-3.] Add the public and private SSH keys you wish to connect with into the `/keys` directory.
-4.] Edit `/app.config.php` and provide the correct paths for:
+**1.]** Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
+
+**2.]** Execute `$ php -f install.php`, or view `/install.php` from a browser. *The install script requires write access to the filesystem to copy and update configuration files.*
+
+**3.]** Add the public and private SSH keys you wish to connect with into the `/keys` directory.
+
+**4.]** Edit `/app.config.php` and provide the correct paths for:
 
     `SSH_PUBLIC_KEY_PATH`<br />
     `SSH_PRIVATE_KEY_PATH`
-    
-5.] Create a user in MySQL to connect with.
-6.] Edit `/classes/MySQLConfiguration.php` and provide the connection details to MySQL.
-7.] Import the MySQL schema located in `/schema/latest.sql` into MySQL.
 
+**5.]** Create a user in MySQL to connect with.
+
+**6.]** Edit `/classes/MySQLConfiguration.php` and provide the connection details to MySQL.
+
+**7.]** Import the MySQL schema located in `/schema/latest.sql` into MySQL.
 
 ```` bash
 	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < /schema/latest.sql
 ````
 
-8.]	Assign the MySQL user created above to the newly imported database `commando`.    
-9.] Create a database `commando` and a collection `executions` in MongoDB. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
-10.] Create the following standard indexes on the `executions` collection:
-   
+**8.]**	Assign the MySQL user created above to the newly imported database `commando`.    
+
+**9.]** Create a database `commando` and a collection `executions` in MongoDB. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
+
+**10.]** Create the following standard indexes on the `executions` collection:   
 
 ```` json
     { "executed" : 1 }
@@ -50,8 +55,9 @@ Installation
     { "recipes.interpreter" : 1 }
 ````
 
-11.] Create a user in MongoDB to connect with.
-12.] Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
+**11.]** Create a user in MongoDB to connect with.
+
+**12.]** Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
 
 Requirements
 ------------
