@@ -10,7 +10,7 @@ The goal of Commando.io is to make it super simple to execute commands on groups
 Screencast, Screenshots, And Additional Details
 --------------------------------
 
-Video demo and screencast: http://youtu.be/eC-8ev_ouEQ
+### Video demo and screencast: http://youtu.be/eC-8ev_ouEQ ###
 
 [ ![Web servers tagged and grouped.](http://cdn.commando.io/home/images/screenshots/small/servers.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/servers.png)
 [ ![Adding a recipe.](http://cdn.commando.io/home/images/screenshots/small/add-recipe.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/add-recipe.png)
