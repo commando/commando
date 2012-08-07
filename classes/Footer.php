@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 	
- 	class Footer {		
+ 	class Footer {
 		public static function render(array $additional_js_files = array()) {
 			echo '<hr>
 				  <footer>
