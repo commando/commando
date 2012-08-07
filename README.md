@@ -20,11 +20,11 @@ Screenshots And Additional Details
 Important Notes
 ---------------
 
-#### This is a very early* alpha build of Commando.io. A few important pieces of the software have not been implemented. Do not expose Commando.io publicly! ####
+#### This is a very early alpha build of Commando.io. A few important pieces of the software have not been implemented. Do not expose Commando.io publicly! ####
 
 * Users and log-in. **Again, do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
-* The ability to view execution history is not implemented. Execution history is logged into MongoDB, but there is not an interface to view it yet.
-* SSH connections and executions still happen via PHP using the `ssh2` extension. This is going to be replaced with a separate dedicated node.js SSH worker using websockets. PHP won't make SSH connections and executions in the future.
+* The ability to view execution history is not implemented. Execution history is logged into *MongoDB*, but there is not an interface to view it yet.
+* SSH connections and executions still happen via `PHP` using the `ssh2` extension. This is going to be replaced with a separate dedicated node.js SSH worker using websockets. PHP won't make SSH connections and executions in the future.
 
 Installation
 ------------
@@ -37,7 +37,7 @@ Installation
 
 **4.)** Edit `/app.config.php` and provide the correct paths for:
 
-    `SSH_PUBLIC_KEY_PATH`<br />
+    `SSH_PUBLIC_KEY_PATH`
     `SSH_PRIVATE_KEY_PATH`
 
 **5.)** Create a user in MySQL to connect with.
@@ -54,7 +54,7 @@ Installation
 
 **9.)** Create a database `commando` and a collection `executions` in MongoDB. *If you need MongoDB hosting check out https://mongohq.com or https://mongolab.com.*
 
-**10.)** Create the following standard indexes on the `executions` collection:   
+**10.)** Create the following standard indexes on the `executions` collection in MongoDB:   
 
 ```` json
     { "executed" : 1 }
