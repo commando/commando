@@ -20,11 +20,11 @@ Screenshots And Additional Details
 Important Notes
 ---------------
 
-#### This is a very early alpha build of Commando.io. A few important pieces of the software have not been implemented. Do not expose Commando.io publicly! ####
+#### This is a very early alpha build of Commando.io. A few important pieces of the software have not been implemented. For security, do not expose Commando.io publicly! ####
 
-* Users and log-in. **Again, do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
-* The ability to view execution history is not implemented. Execution history is logged into *MongoDB*, but there is not an interface to view it yet.
-* SSH connections and executions still happen via `PHP` using the `ssh2` extension. This is going to be replaced with a separate dedicated node.js SSH worker using websockets. PHP won't make SSH connections and executions in the future.
+* Users and log-in. **Again, please do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
+* The ability to view execution history is not implemented. Execution history is written to *MongoDB*, but there is not an interface to view it yet.
+* SSH connections and executions still happen via `PHP` using the `ssh2` extension. This is going to be replaced with a separate dedicated `node.js` SSH worker using websockets. PHP won't make SSH connections and executions in the near future.
 
 Installation
 ------------
@@ -37,8 +37,8 @@ Installation
 
 **4.)** Edit `/app.config.php` and provide the correct paths for:
 
-    `SSH_PUBLIC_KEY_PATH`
-    `SSH_PRIVATE_KEY_PATH`
+     SSH_PUBLIC_KEY_PATH
+     SSH_PRIVATE_KEY_PATH
 
 **5.)** Create a user in MySQL to connect with.
 
@@ -67,6 +67,26 @@ Installation
 **11.)** Create a user in MongoDB to connect with.
 
 **12.)** Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
+
+**13.)** Setup rewrite rules in the web-server.
+
+#### nginx ####
+```` nignx
+location ~ ^[^.]+$ {
+    fastcgi_param SCRIPT_FILENAME $document_root/controller.php;
+    fastcgi_param SCRIPT_NAME /controller.php;
+    fastcgi_param PATH_INFO $uri;
+}
+````
+
+#### lighttpd ####
+```` lighttpd
+$HTTP["host"] =~ "^(your-domain\.com)$" {
+        url.rewrite-once = (
+                "^[^.]*$" => "controller.php/$1"
+        )
+}
+````
 
 Requirements
 ------------
