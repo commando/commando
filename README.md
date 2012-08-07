@@ -7,8 +7,10 @@ GitHub fundamentally changed the way developers use revision control by creating
 
 The goal of Commando.io is to make it super simple to execute commands on groups of servers and visualize the results. Additionally Commando.io provides IT compliance and accountability, as every command executed is logged with who executed what, when, and why. Finally all commands are versioned and centrally stored.
 
-Screenshots And Additional Details
+Screencast, Screenshots, And Additional Details
 --------------------------------
+
+<iframe width="640" height="480" src="http://www.youtube.com/embed/eC-8ev_ouEQ?rel=0" frameborder="0" allowfullscreen></iframe>
 
 [ ![Web servers tagged and grouped.](http://cdn.commando.io/home/images/screenshots/small/servers.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/servers.png)
 [ ![Adding a recipe.](http://cdn.commando.io/home/images/screenshots/small/add-recipe.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/add-recipe.png)
