@@ -95,7 +95,7 @@ $HTTP["host"] =~ "^(your-domain\.com)$" {
 Requirements
 ------------
 
-### PHP ####
+#### PHP ####
 Version **5.3.0** or greater.
 
 #### PHP Extensions ####
