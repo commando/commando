@@ -97,7 +97,7 @@ Requirements
 ------------
 
 #### Webserver ####
-nginx or lighttpd. Apache should work as well, you will just need to setup the `mod_rewrite` rules.
+**nginx** or **lighttpd**. Apache should work as well, you will just need to setup the `mod_rewrite` rules.
 
 #### PHP ####
 Version **5.3.0** or greater.
