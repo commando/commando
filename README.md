@@ -68,14 +68,15 @@ Installation
 
 **12.)** Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
 
-**13.)** Setup rewrite rules in the web-server.
+**13.)** Setup rewrite rules in the web-server:
 
 #### nginx ####
-```` nignx
+```` nginx
 location ~ ^[^.]+$ {
     fastcgi_param SCRIPT_FILENAME $document_root/controller.php;
     fastcgi_param SCRIPT_NAME /controller.php;
     fastcgi_param PATH_INFO $uri;
+    ...
 }
 ````
 
