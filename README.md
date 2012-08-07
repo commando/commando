@@ -73,7 +73,7 @@ Right now installation is a bit involved and brutal, but once we iron out Comman
 
 **13.)** Setup rewrite rules on the web-server:
 
-#### nginx ####
+##### nginx #####
 ```` nginx
 location ~ ^[^.]+$ {
     fastcgi_param SCRIPT_FILENAME $document_root/controller.php;
@@ -84,7 +84,7 @@ location ~ ^[^.]+$ {
 }
 ````
 
-#### lighttpd ####
+##### lighttpd #####
 ```` lighttpd
 $HTTP["host"] =~ "^(your-domain-here\.com)$" {
         url.rewrite-once = (
@@ -96,7 +96,7 @@ $HTTP["host"] =~ "^(your-domain-here\.com)$" {
 Requirements
 ------------
 
-#### Webserver ####
+#### Web-server ####
 **nginx** or **lighttpd**. Apache should work as well, you will just need to setup the `mod_rewrite` rules.
 
 #### PHP ####
