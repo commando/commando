@@ -34,7 +34,7 @@ Right now installation is a bit involved and brutal, but once we iron out Comman
 
 **1.)** Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
 
-**2.)** Execute `$ php -f install.php`, or view `/install.php` from a browser. *The install script requires write access to the filesystem to copy and update configuration files.*
+**2.)** Execute `$ php -f install.php`, or view `/install.php` via a browser. *The install script requires write access to the filesystem to copy and update configuration files.*
 
 **3.)** Add the public and private SSH keys you wish to connect with into the `/keys` directory.
 
@@ -71,7 +71,7 @@ Right now installation is a bit involved and brutal, but once we iron out Comman
 
 **12.)** Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
 
-**13.)** Setup rewrite rules in the web-server:
+**13.)** Setup rewrite rules on the web-server:
 
 #### nginx ####
 ```` nginx
@@ -80,7 +80,7 @@ location ~ ^[^.]+$ {
     fastcgi_param SCRIPT_NAME /controller.php;
     fastcgi_param PATH_INFO $uri;
     
-    #The standard fast-cgi directives for PHP
+    #Rest of the standard fast-cgi directives for PHP
 }
 ````
 
@@ -95,6 +95,9 @@ $HTTP["host"] =~ "^(your-domain-here\.com)$" {
 
 Requirements
 ------------
+
+#### Webserver ####
+nginx or lighttpd. Apache should work as well, you will just need to setup the `mod_rewrite` rules.
 
 #### PHP ####
 Version **5.3.0** or greater.
