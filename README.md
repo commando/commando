@@ -22,7 +22,7 @@ Screencast, Screenshots, And Additional Details
 Important Notes
 ---------------
 
-#### This is a very early alpha build of Commando.io. A few important pieces of the software have not been implemented. For security, do not expose Commando.io publicly! ####
+#### This is a very early alpha build of Commando.io. For security, do not expose Commando.io publicly! The following important features of the software have not been implemented: ####
 
 * Users and log-in. **Again, please do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
 * The ability to view execution history is not implemented. Execution history is written to *MongoDB*, but there is not an interface to view it yet.
@@ -107,7 +107,7 @@ Version **5.3.0** or greater.
 + **ssh2** (http://pecl.php.net/package/ssh2)
 
 #### MySQL####
-Version **5.0** or greater running the **InnoDB** storage engine. *MyISAM is not supported.*
+Version **5.0** or greater running the **InnoDB** storage engine. *MyISAM is NOT supported.*
 
 #### MongoDB ####
 Version **2.0** or greater is highly recommended. Older versions of MongoDB may work.
