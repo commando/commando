@@ -17,6 +17,10 @@
 	
 	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
 	
+	//Make sure we can connect and select the executions collection in MongoDB
+	MongoConnection::connect();
+	MongoConnection::selectCollection("executions");
+	
 	//Get groups
 	$groups = array();
 	$result = MySQLQueries::get_groups();

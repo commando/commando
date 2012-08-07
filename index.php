@@ -17,10 +17,10 @@
 	
 	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
 
-	Header::set_title("Commando.io - Dashboard");
+	Header::set_title("Commando.io");
 	Header::render();
 	
-	Navigation::render("dashboard");
+	Navigation::render();
 ?>
  	
  	<a href="https://github.com/nodesocket/commando"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 99999;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
@@ -50,7 +50,7 @@
       </div>
       
        <div class="row">
-        <div class="span12 well" style="width: 1130px; padding-left: 45px;">
+        <div class="span12 well" style="width: 1105px; padding-left: 45px;">
           <h1 style="margin-bottom: 10px;">Contacts</h1>
           <div style="float: left;">
           	<p><a href="http://commando.io">http://commando.io</a></p>

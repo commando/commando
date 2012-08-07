@@ -28,23 +28,22 @@
 	////
 	// No request passed, require index page
 	////
-	if(empty($request)) {
+	if(empty($request) || !isset($request[0])) {
 		require_once(__DIR__ . "/index.php");
 	}
 	else {
 		////
+		// Check to make sure not calling controller.php or /controller directly
+		////
+		if($request[0] === "controller.php" || $request[0] === "controller") {
+			Functions::redirect("/");
+			die();
+		}
+		
+		////
 		// Build page
 		////
-		if(isset($request[0])) {
-			if($request[0] === "controller.php") {
-				Functions::redirect("/");
-				die();
-			}
-			
-			$page = $request[0] . ".php";
-		} else {
-			$page = "index.php";
-		}
+		$page = $request[0] . ".php";
 		
 		////
 		// Set the rest of the request elements as query string parameters
@@ -53,6 +52,9 @@
 			$_GET['param' . $i] = $request[$i];
 		}
 		
+		////
+		// Include the page
+		////
 		if(!@include_once(__DIR__ . "/" . $page)) {
 			Error::halt(404, 'not found', 'File \'' . $page . '\' does not exist.');
 		}
