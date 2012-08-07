@@ -96,7 +96,7 @@ $HTTP["host"] =~ "^(your-domain-here\.com)$" {
 Requirements
 ------------
 
-#### Web-server ####
+#### Web-Server ####
 **nginx** or **lighttpd**. Apache should work as well, you will just need to setup the `mod_rewrite` rules.
 
 #### PHP ####
