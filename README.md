@@ -26,10 +26,12 @@ Important Notes
 
 * Users and log-in. **Again, please do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
 * The ability to view execution history is not implemented. Execution history is written to *MongoDB*, but there is not an interface to view it yet.
-* SSH connections and executions still happen via `PHP` using the `ssh2` extension. This is going to be replaced with a separate dedicated `node.js` SSH worker using websockets. PHP won't make SSH connections and executions in the near future.
+* SSH connections and executions still happen via `PHP` using the `ssh2` extension. This is going to be replaced with a separate dedicated `node.js` SSH worker using websockets. PHP will not make SSH connections and executions in the near future.
 
 Installation
 ------------
+
+Right now installation is a bit involved and brutal, but once we iron out Commando.io a bit further, we will re-work `/install.php` and make installation much simpler.
 
 **1.)** Clone the repo, `git clone git://github.com/nodesocket/commando.git`, or [download the latest release](https://github.com/nodesocket/commando/tarball/master).
 
