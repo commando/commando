@@ -17,10 +17,10 @@ Screenshots And Additional Details
 
 ### See http://commando.io for additional details. ###
 
-Important Notes **READ**
+Important Notes
 ---------------
 
-### This is a **very early** alpha build of Commando.io. A few important pieces of the software have not been implemented. Do not expose Commando.io publicly! ###
+#### This is a very early* alpha build of Commando.io. A few important pieces of the software have not been implemented. Do not expose Commando.io publicly! ####
 
 * Users and log-in. **Again, do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
 * The ability to view execution history is not implemented. Execution history is logged into MongoDB, but there is not an interface to view it yet.
