@@ -76,7 +76,8 @@ location ~ ^[^.]+$ {
     fastcgi_param SCRIPT_FILENAME $document_root/controller.php;
     fastcgi_param SCRIPT_NAME /controller.php;
     fastcgi_param PATH_INFO $uri;
-    ...
+    
+    #The rest of standard fast-cgi directives for PHP
 }
 ````
 
