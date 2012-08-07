@@ -17,12 +17,12 @@ Screenshots And Additional Details
 
 ### See http://commando.io for additional details. ###
 
-Important Notes
+Important Notes **READ**
 ---------------
 
-This is a **very early** alpha build of Commando.io. A few important pieces of the software have not been implemented.
+### This is a **very early** alpha build of Commando.io. A few important pieces of the software have not been implemented. Do not expose Commando.io publicly! ###
 
-* Users and log-in. **Do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
+* Users and log-in. **Again, do not expose Commando.io publicly**. Run it locally, and use web-server authentication for now. A fully featured users and log-in system is coming.
 * The ability to view execution history is not implemented. Execution history is logged into MongoDB, but there is not an interface to view it yet.
 * SSH connections and executions still happen via PHP using the `ssh2` extension. This is going to be replaced with a separate dedicated node.js SSH worker using websockets. PHP won't make SSH connections and executions in the future.
 
