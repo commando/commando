@@ -1,4 +1,4 @@
-# Commando.io - Dev-Ops Evolved #
+# Commando.io - Dev-Ops Evolved. #
 
 Commando.io is a web-based interface for streamlining the use of SSH for deployments and system administration tasks across groups of remote servers.
 
@@ -11,10 +11,10 @@ Screencast, Screenshots, And Additional Details
 
 ### Demo video and screencast: http://youtu.be/eC-8ev_ouEQ ###
 
-[ ![Web servers tagged and grouped.](http://cdn.commando.io/home/images/screenshots/small/servers.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/servers.png)
-[ ![Adding a recipe.](http://cdn.commando.io/home/images/screenshots/small/add-recipe.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/add-recipe.png)
-[ ![Executing a recipe on a group of servers.](http://cdn.commando.io/home/images/screenshots/small/execute.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/execute.png)
-[ ![A collection of various groups.](http://cdn.commando.io/home/images/screenshots/small/groups.png) ](http://cdn.commando.io/home/images/screenshots/xlarge/groups.png)
+[ ![Web servers tagged and grouped.](http://netdna.commando.io/images/screenshots/small/servers.png) ](http://netdna.commando.io/images/screenshots/xlarge/servers.png)
+[ ![Adding a recipe.](http://netdna.commando.io/images/screenshots/small/add-recipe.png) ](http://netdna.commando.io/images/screenshots/xlarge/add-recipe.png)
+[ ![Executing a recipe on a group of servers.](http://netdna.commando.io/images/screenshots/small/execute.png) ](http://netdna.commando.io/images/screenshots/xlarge/execute.png)
+[ ![A collection of various groups.](http://netdna.commando.io/images/screenshots/small/groups.png) ](http://netdna.commando.io/images/screenshots/xlarge/groups.png)
 
 ### See http://commando.io for additional details. ###
 
