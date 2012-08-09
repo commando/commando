@@ -50,7 +50,7 @@ Right now installation is a bit involved and brutal, but once we iron out Comman
 **7.)** Import the MySQL schema located in `/schema/latest.sql` into MySQL.
 
 ```` bash
-	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST DATABASE < /schema/latest.sql
+	$ mysql --user=USERNAME --pass=PASSWORD --host=SERVERHOST < /schema/latest.sql
 ````
 
 **8.)**	Assign the MySQL user created above to the newly imported database `commando`.    
