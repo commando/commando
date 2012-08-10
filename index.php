@@ -33,7 +33,6 @@
 
       <div class="row">
         <div class="span4 well" style="width: 330px">
-<<<<<<< HEAD
           <h1 style="margin-bottom: 10px;"><a href="<?php Links::render("servers") ?>">Servers</a></h1>
           <p>Servers can either be physical hardware, or virtualized/cloud instances.</p>
           <p><a class="btn btn-primary btn-large" href="<?php Links::render("servers") ?>">Servers &raquo;</a></p>
@@ -47,7 +46,6 @@
           <h1 style="margin-bottom: 10px;"><a href="<?php Links::render("groups") ?>">Groups</a></h1>
           <p>Groups are a way to organize servers into collections. You may choose to create groups based on server role or location.</p>
           <p><a class="btn btn-primary btn-large" href="<?php Links::render("groups") ?>">Groups &raquo;</a></p>
-=======
           <h1 style="margin-bottom: 10px;"><a href="<?php echo Links::render("servers") ?>">Servers</a></h1>
           <p>Servers can either be physical hardware, or virtualized/cloud instances.</p>
           <p><a class="btn btn-primary btn-large" href="<?php echo Links::render("servers") ?>">Servers &raquo;</a></p>
@@ -61,7 +59,6 @@
           <h1 style="margin-bottom: 10px;"><a href="<?php echo Links::render("groups") ?>">Groups</a></h1>
           <p>Groups are a way to organize servers into collections. You may choose to create groups based on server role or location.</p>
           <p><a class="btn btn-primary btn-large" href="<?php echo Links::render("groups") ?>">Groups &raquo;</a></p>
->>>>>>> Version bump 0.2.5. See CHANGELOG.md
         </div>
       </div>
       
