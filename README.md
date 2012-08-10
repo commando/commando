@@ -85,7 +85,7 @@ Pretty links disabled:
 /view-recipe.php?param1=rec_c4Bb4E01Q0d8a37N4bU37
 ````
 
-##### nginx #####
+##### Nginx #####
 ```` nginx
 location ~ ^[^.]+$ {
     fastcgi_param SCRIPT_FILENAME $document_root/controller.php;
@@ -96,7 +96,7 @@ location ~ ^[^.]+$ {
 }
 ````
 
-##### lighttpd #####
+##### Lighttpd #####
 ```` lighttpd
 $HTTP["host"] =~ "^(your-domain-here\.com)$" {
         url.rewrite-once = (
@@ -109,7 +109,7 @@ Requirements
 ------------
 
 #### Web-Server ####
-**nginx** or **lighttpd**. Apache should work as well, you will just need to setup the `mod_rewrite` rules.
+**Nginx**, **Lighttpd**, or **Apache**
 
 #### PHP ####
 Version **5.3.0** or greater.
