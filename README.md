@@ -27,6 +27,27 @@ Important Notes
 * The ability to view execution history is not implemented. Execution history is written to *MongoDB*, but there is not an interface to view it yet.
 * SSH connections and executions still happen via `PHP` using the `ssh2` extension. This is going to be replaced with a separate dedicated `node.js` SSH worker using websockets. PHP will not make SSH connections and executions in the near future.
 
+Requirements
+------------
+
+#### Web-Server ####
+**Nginx**, **Lighttpd**, or **Apache**
+
+#### PHP ####
+Version **5.3.0** or greater.
+
+#### PHP Extensions ####
++ **mysqli**
++ **json**
++ **mongo** (https://github.com/mongodb/mongo-php-driver)
++ **ssh2** (http://pecl.php.net/package/ssh2)
+
+#### MySQL####
+Version **5.0** or greater running the **InnoDB** storage engine. *MyISAM is NOT supported.*
+
+#### MongoDB ####
+Version **2.0** or greater is highly recommended. Older versions of MongoDB may work.
+
 Installation
 ------------
 
@@ -101,34 +122,13 @@ $HTTP["host"] =~ "^(your-domain-here\.com)$" {
 }
 ````
 
-Requirements
-------------
-
-#### Web-Server ####
-**Nginx**, **Lighttpd**, or **Apache**
-
-#### PHP ####
-Version **5.3.0** or greater.
-
-#### PHP Extensions ####
-+ **mysqli**
-+ **json**
-+ **mongo** (https://github.com/mongodb/mongo-php-driver)
-+ **ssh2** (http://pecl.php.net/package/ssh2)
-
-#### MySQL####
-Version **5.0** or greater running the **InnoDB** storage engine. *MyISAM is NOT supported.*
-
-#### MongoDB ####
-Version **2.0** or greater is highly recommended. Older versions of MongoDB may work.
-
 Current Version
 ---------------
-#### https://github.com/nodesocket/commando/blob/master/VERSION ####
+https://github.com/nodesocket/commando/blob/master/VERSION
 
 Changelog
 ---------
-#### https://github.com/nodesocket/commando/blob/master/CHANGELOG.md ####
+https://github.com/nodesocket/commando/blob/master/CHANGELOG.md
 
 Support, Bugs, And Feature Requests
 -----------------------
