@@ -28,7 +28,7 @@
 			//
 			// There may be a better way to do this. Do you know?
 			////
-			if(isset($_SERVER['REQUEST_URI']) && isset($_SERVER['HTTP_REFERER']) && isset($_SERVER['HTTP_HOST']) && $_SERVER['REQUEST_URI'] !== "/") {
+			if(!Links::$pretty && isset($_SERVER['REQUEST_URI']) && isset($_SERVER['HTTP_REFERER']) && isset($_SERVER['HTTP_HOST']) && $_SERVER['REQUEST_URI'] !== "/") {
 				//Remove http or https from $_SERVER['HTTP_REFERER']
 				$referer = rtrim(str_replace(array("http://", "https://"), "", $_SERVER['HTTP_REFERER']), "/");
 				
