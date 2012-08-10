@@ -42,7 +42,7 @@
         	////
 			// Remove possible duplicates from additional_js_files
 			////
-			if(sizeof($additional_js_files) > 1) {
+			if(count($additional_js_files) > 1) {
 				$additional_js_files = array_unique($additional_js_files);
 			}
         

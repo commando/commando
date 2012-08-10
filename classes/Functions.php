@@ -21,7 +21,7 @@
  			$path = ltrim($parse['path'], '/');
  			$pieces = explode('/', $path);
  			
- 			for($i = 0; $i < sizeof($pieces); $i++) {
+ 			for($i = 0; $i < count($pieces); $i++) {
  				if($pieces[$i] === null || $pieces[$i] === '') {
  					unset($pieces[$i]);
  				}

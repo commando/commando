@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 	
-	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
+	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? require_once(__DIR__ . "/classes/Requires.php") : Links::$pretty = true;
 
 	Header::set_title("Commando.io");
 	Header::render();
@@ -33,19 +33,19 @@
 
       <div class="row">
         <div class="span4 well" style="width: 330px">
-          <h1 style="margin-bottom: 10px;"><a href="/servers">Servers</a></h1>
+          <h1 style="margin-bottom: 10px;"><a href="<?= Links::render("servers") ?>">Servers</a></h1>
           <p>Servers can either be physical hardware, or virtualized/cloud instances.</p>
-          <p><a class="btn btn-primary btn-large" href="/servers">Servers &raquo;</a></p>
+          <p><a class="btn btn-primary btn-large" href="<?= Links::render("servers") ?>">Servers &raquo;</a></p>
         </div>
         <div class="span4 well" style="width: 330px">
-          <h1 style="margin-bottom: 10px;"><a href="/recipes">Recipes</a></h1>
+          <h1 style="margin-bottom: 10px;"><a href="<?= Links::render("recipes") ?>">Recipes</a></h1>
           <p>Recipes are containers of commands that are fully versioned. Recipes can be written in pure <i><strong>shell</strong></i>, <i><strong>bash</strong></i>, <i><strong>perl</strong></i>, <i><strong>python</strong></i>, or <i><strong>node.js</strong></i>.</p>
-          <p><a class="btn btn-primary btn-large" href="/recipes">Recipes &raquo;</a></p>
+          <p><a class="btn btn-primary btn-large" href="<?= Links::render("recipes") ?>">Recipes &raquo;</a></p>
         </div>
         <div class="span4 well" style="width: 330px">
-          <h1 style="margin-bottom: 10px;"><a href="/groups">Groups</a></h1>
+          <h1 style="margin-bottom: 10px;"><a href="<?= Links::render("groups") ?>">Groups</a></h1>
           <p>Groups are a way to organize servers into collections. You may choose to create groups based on server role or location.</p>
-          <p><a class="btn btn-primary btn-large" href="/groups">Groups &raquo;</a></p>
+          <p><a class="btn btn-primary btn-large" href="<?= Links::render("groups") ?>">Groups &raquo;</a></p>
         </div>
       </div>
       

@@ -51,7 +51,7 @@
 					    ////
 					    // Remove possible duplicates from additional_css_files
 					    ////
-					    if(sizeof($additional_css_files) > 1) {
+					    if(count($additional_css_files) > 1) {
 					    	 $additional_css_files = array_unique($additional_css_files);
 					    }
 					   

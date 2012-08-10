@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 	
-	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
+	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? require_once(__DIR__ . "/classes/Requires.php") : Links::$pretty = true;
 	
 	Functions::check_required_parameters(array($_GET['param1']));
 	
@@ -37,7 +37,7 @@
       	 <h1 class="header" style="float: left;"><?= $recipe->name ?></h1> 
      	 
      	<div style="float: right;">
-     	 	<a href="/view-recipe/<?= $recipe->id ?>" class="btn btn-large"><?= substr($recipe->version, 0, 10) ?> (HEAD)</a>
+     	 	<a href="<?= Links::render("view-recipe", array($recipe->id)) ?>" class="btn btn-large"><?= substr($recipe->version, 0, 10) ?> (HEAD)</a>
      	 </div>
       </div>
       
@@ -81,7 +81,7 @@
 			    	<div class="control-group">
 						<div class="controls">
 							<a class="btn btn-primary" id="edit-recipe-submit" onclick="validate_edit_recipe();"><i class="icon-ok-sign icon-white"></i> Update Recipe</a>
-							<a class="btn" href="/view-recipe/<?= $recipe->id ?>">Cancel</a>
+							<a class="btn" href="<?= Links::render("view-recipe", array($recipe->id)) ?>">Cancel</a>
 						</div>
 			       </div>
 			    </fieldset>

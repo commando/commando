@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 	
-	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
+	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? require_once(__DIR__ . "/classes/Requires.php") : Links::$pretty = true;
 	
 	//Get groups
 	$groups = array();

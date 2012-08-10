@@ -25,5 +25,5 @@
 				  
 	$result = MySQLQueries::edit_settings(json_encode((object)$data));
 	
-	Functions::redirect("/settings/saved");
+	Functions::redirect(Links::render("settings", array("saved")));
 ?>

@@ -21,5 +21,5 @@
 	
 	MySQLQueries::delete_recipes(array($_GET['id']));
 	
-	Functions::redirect("/recipes");
+	Functions::redirect(Links::render("recipes"));
 ?>

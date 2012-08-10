@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 	
-	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
+	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? require_once(__DIR__ . "/classes/Requires.php") : Links::$pretty = true;
 	
 	//Get recipes
 	$recipes = array();
@@ -43,7 +43,7 @@
       
 	  <div class="row">
    	  	<div class="span12 well">
-      		<a href="/add-recipe" class="btn btn-primary btn-large"><i class="icon-plus-sign icon-white"></i> Add Recipe</a>
+      		<a href="<?= Links::render("add-recipe") ?>" class="btn btn-primary btn-large"><i class="icon-plus-sign icon-white"></i> Add Recipe</a>
       	</div>
       </div>
       
@@ -55,7 +55,7 @@
 	  	  		Recipes are containers of commands that are fully versioned. Recipes can be written in pure <i><strong>shell</strong></i>, <i><strong>bash</strong></i>, <i><strong>perl</strong></i>, <i><strong>python</strong></i>, or <i><strong>node.js</strong></i>.
       		  </div>
 		      <div id="no-recipes" class="alert alert-grey no-bottom-margin" <?php if(count($recipes) > 0): ?>style="display: none;"<?php endif; ?>>
-		      	No recipes added. <a href="/add-recipe">Add</a> a recipe now.
+		      	No recipes added. <a href="<?= Links::render("add-recipe") ?>">Add</a> a recipe now.
 			  </div>
 	      	  <?php if(count($recipes) > 0): ?>
 		      	  <div id="table-container">
@@ -79,7 +79,7 @@
 			      			<?php foreach($recipes as $recipe): ?>	
 			      				<tr id="<?= $recipe->id ?>" class="recipe">
 				      				<td><input type="checkbox" class="recipe-delete-check" value="<?= $recipe->id ?>" /></td>
-				      				<td><a href="/view-recipe/<?= $recipe->id ?>"><?= $recipe->name ?></a></td>
+				      				<td><a href="<?= Links::render("view-recipe", array($recipe->id)) ?>"><?= $recipe->name ?></a></td>
 				      				<td><?= ucfirst($recipe->interpreter) ?></td>
 				      				<td><span class="badge"><?= $recipe->number_of_versions ?></span></td>
 				      				<td><?= $recipe->added ?></td>

@@ -48,7 +48,7 @@
 		////
 		// Set the rest of the request elements as query string parameters
 		////
-		for($i = 1; $i < sizeof($request); $i++) {
+		for($i = 1; $i < count($request); $i++) {
 			$_GET['param' . $i] = $request[$i];
 		}
 		

@@ -21,5 +21,5 @@
 	
 	MySQLQueries::add_group($_POST['name']);
 	
-	Functions::redirect("/groups");
+	Functions::redirect(Links::render("groups"));
 ?>

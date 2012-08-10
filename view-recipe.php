@@ -15,7 +15,7 @@
 	# limitations under the License.
 	*/
 		
-	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? header("Location: /") : null;
+	($_SERVER['SCRIPT_NAME'] !== "/controller.php") ? require_once(__DIR__ . "/classes/Requires.php") : Links::$pretty = true;
 	
 	require_once(__DIR__ . "/markdown/markdown.php");
 	
@@ -82,12 +82,12 @@
       <div class="row">
    	  	<div class="span12 well">
       		<? if($recipe->recipe_version === $head->recipe_version): ?>
-      			<a href="/edit-recipe/<?= $recipe->id ?>" class="btn btn-primary btn-large"><i class="icon-edit icon-white"></i> Edit Recipe</a>
+      			<a href="<?= Links::render("edit-recipe", array($recipe->id)) ?>" class="btn btn-primary btn-large"><i class="icon-edit icon-white"></i> Edit Recipe</a>
       			<a id="delete-recipe" href="/actions/delete_recipe.php?id=<?= $recipe->id ?>" class="btn btn-large"><i class="icon-remove"></i> Delete Recipe</a>
       		<? else: ?>
       			<div class="alert alert-info no-bottom-margin">
 					<h4>Notice!</h4>
-					You are viewing an <strong><u>old version</u></strong> of this recipe. Only the <strong><u>head</u></strong> version of recipes may be edited. If you would like to make modifications to this recipe, navigate to the <a href="/view-recipe/<?= $recipe->id ?>">head</a>.
+					You are viewing an <strong><u>old version</u></strong> of this recipe. Only the <strong><u>head</u></strong> version of recipes may be edited. If you would like to make modifications to this recipe, navigate to the <a href="<?= Links::render("view-recipe", array($recipe->id)) ?>">head</a>.
 	  			</div>
 	  		<? endif; ?>
       	</div>
@@ -117,7 +117,17 @@
                 			<li>
                 				<select name="versions" id="recipe-versions" class="span2" data-placeholder="">
 									<?php foreach($recipe_versions as $recipe_version): ?>
-										<option value="/view-recipe/<?= $recipe->id ?><? if($recipe_version->id !== $head->recipe_version) { echo '/' . $recipe_version->id; } ?>" <? if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?= substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<? endif; ?></option>
+										<option value="
+										
+											<?php
+												if($recipe_version->id !== $head->recipe_version) {
+													echo Links::render("view-recipe", array($recipe->id, $recipe_version->id));
+												} else {
+													echo Links::render("view-recipe", array($recipe->id));
+												}
+											?>
+
+										" <? if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?= substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<? endif; ?></option>
 									<? endforeach; ?>
 								</select>
                 			</li>

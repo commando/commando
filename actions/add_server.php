@@ -21,5 +21,5 @@
 	
 	MySQLQueries::add_server($_POST['label'], $_POST['group'], $_POST['tags'], $_POST['address'], $_POST['ssh_username'], $_POST['ssh_port']);
 	
-	Functions::redirect("/servers");
+	Functions::redirect(Links::render("servers"));
 ?>

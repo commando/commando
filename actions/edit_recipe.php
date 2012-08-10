@@ -21,5 +21,5 @@
 	
 	MySQLQueries::edit_recipe($_POST['id'], $_POST['name'], $_POST['interpreter'], $_POST['notes'], $_POST['content']);
 	
-	Functions::redirect("/view-recipe/" . $_POST['id']);
+	Functions::redirect(Links::render("view-recipe", array($_POST['id'])));
 ?>

@@ -16,11 +16,11 @@
 	*/
 	
  	class Navigation {		
-		private static $pages = array("execute" => "/execute",
-				                      "servers" => "/servers",
-				                      "recipes" => "/recipes",
-				                       "groups" => "/groups",
-				                     "settings" => "/settings");
+		private static $pages = array("execute",
+				                      "servers",
+				                      "recipes",
+				                       "groups",
+				                     "settings");
 		
 		private static $right = null;
 				
@@ -41,14 +41,14 @@
 			          <div class="nav-collapse">
 			            <ul class="nav">';
 			            
-			             	foreach(Navigation::$pages as $title => $url) {
-			             		if($title === strtolower($current_page)) {
+			             	foreach(Navigation::$pages as $url) {
+			             		if($url === strtolower($current_page)) {
 			             			echo '<li class="active">';
 			             		} else {
 			             			echo '<li>';
 			             		}
 			             		
-			             		echo '<a href="' . $url . '">' . ucfirst($title) . '</a></li>';
+			             		echo '<a href="' . Links::render($url) . '">' . ucfirst($url) . '</a></li>';
 			             	}     
 			              
 			       echo '</ul>';

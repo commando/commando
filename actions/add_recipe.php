@@ -21,5 +21,5 @@
 	
 	MySQLQueries::add_recipe($_POST['name'], $_POST['interpreter'], $_POST['notes'], $_POST['content']);
 	
-	Functions::redirect("/recipes");
+	Functions::redirect(Links::render("recipes"));
 ?>
