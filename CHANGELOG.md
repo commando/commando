@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### Version 0.2.2 (open source)
+- Short PHP tags `<?` replaced with full tags `<?php` in the entire application for maximum compatibility with different `php.ini` configurations.
+
 ### Version 0.2.1 (open source)
 - Fixed a bug in `install.php` which generate a `CRYPTO_SEED` of 62 characters instead of 64. Reduced required length in `app.config.php` to 40 characters.
 

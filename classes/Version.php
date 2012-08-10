@@ -19,6 +19,6 @@
 		////
 		//	Major.Minor.Revision
 		////
-		const current = "0.2.1 (open source)";
+		const current = "0.2.2 (open source)";
  	}
 ?>

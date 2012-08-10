@@ -75,21 +75,21 @@
       	 <h1 class="header" style="float: left;"><?= $recipe->name ?></h1> 
      	 
      	 <div style="float: right;">
-     	 	 <a class="btn btn-large disabled"><?= substr($recipe->version, 0, 10) ?><?php if($recipe->recipe_version === $head->recipe_version): ?> (HEAD)<? endif; ?></a>
+     	 	 <a class="btn btn-large disabled"><?= substr($recipe->version, 0, 10) ?><?php if($recipe->recipe_version === $head->recipe_version): ?> (HEAD)<?php endif; ?></a>
      	 </div>
       </div>
       
       <div class="row">
    	  	<div class="span12 well">
-      		<? if($recipe->recipe_version === $head->recipe_version): ?>
+      		<?php if($recipe->recipe_version === $head->recipe_version): ?>
       			<a href="<?= Links::render("edit-recipe", array($recipe->id)) ?>" class="btn btn-primary btn-large"><i class="icon-edit icon-white"></i> Edit Recipe</a>
       			<a id="delete-recipe" href="/actions/delete_recipe.php?id=<?= $recipe->id ?>" class="btn btn-large"><i class="icon-remove"></i> Delete Recipe</a>
-      		<? else: ?>
+      		<?php else: ?>
       			<div class="alert alert-info no-bottom-margin">
 					<h4>Notice!</h4>
 					You are viewing an <strong><u>old version</u></strong> of this recipe. Only the <strong><u>head</u></strong> version of recipes may be edited. If you would like to make modifications to this recipe, navigate to the <a href="<?= Links::render("view-recipe", array($recipe->id)) ?>">head</a>.
 	  			</div>
-	  		<? endif; ?>
+	  		<?php endif; ?>
       	</div>
       </div>
       
@@ -127,8 +127,8 @@
 												}
 											?>
 
-										" <? if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?= substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<? endif; ?></option>
-									<? endforeach; ?>
+										" <?php if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?= substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<?php endif; ?></option>
+									<?php endforeach; ?>
 								</select>
                 			</li>
                 		</ul>

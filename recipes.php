@@ -89,7 +89,7 @@
 				      	</tbody>
 				      </table>
 		      	  </div>
-		      <? endif; ?>
+		      <?php endif; ?>
 	    </div>
 	  </div>
 <?php

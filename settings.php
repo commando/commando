@@ -49,11 +49,11 @@
 			<?php endif; ?>
 
 			<form id="form-settings" class="well form-horizontal" method="post" action="/actions/edit_settings.php">
-		    	 <? if(isset($settings->modified)): ?>
+		    	 <?php if(isset($settings->modified)): ?>
 		    	 	<div style="float: right;">
 		    	 		<a class="btn disabled">Modified <?= $settings->modified ?></a>
 		    	 	</div>
-		    	 <? endif; ?>
+		    	 <?php endif; ?>
 		    	 <fieldset>
 			    	<legend>Commando.io Public SSH Key</legend>
 			    	<div class="control-group span11" id="settings-public-ssh-key"><div class="progress progress-striped active"><div class="bar" style="width: 100%;"></div></div></div>
@@ -78,9 +78,9 @@
 			        	<label class="control-label" for="default-ssh-port">Default Interpreter</label>
 			        	<div class="controls">
 			          		<select name="default_interpreter" id="default-interpreter" class="span2" data-placeholder="">
-								<? foreach($interpreters as $interpreter): ?>
-									<option value="<?= $interpreter ?>" <? if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <? endif; ?>><?= ucfirst($interpreter) ?></option>	
-								<? endforeach; ?>
+								<?php foreach($interpreters as $interpreter): ?>
+									<option value="<?= $interpreter ?>" <?php if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <?php endif; ?>><?= ucfirst($interpreter) ?></option>	
+								<?php endforeach; ?>
 							</select>
 			          		<p class="help-block">The default interpreter that is pre-filled when adding a new recipe.</p>
 			        	</div>

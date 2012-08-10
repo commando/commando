@@ -54,9 +54,9 @@
 			        	<label class="control-label" for="recipe-interpreter">Interpreter</label>
 			        	<div class="controls">
 			          		<select name="interpreter" id="recipe-interpreter" class="span2" data-placeholder="">
-								<? foreach($interpreters as $interpreter): ?>
-									<option value="<?= $interpreter ?>" <? if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <? endif; ?>><?= ucfirst($interpreter) ?></option>	
-								<? endforeach; ?>
+								<?php foreach($interpreters as $interpreter): ?>
+									<option value="<?= $interpreter ?>" <?php if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <?php endif; ?>><?= ucfirst($interpreter) ?></option>	
+								<?php endforeach; ?>
 							</select>
 			          		<p class="help-block">The interpreter to execute the recipe with. If you wish to write scripts with control structures and functions select an interpreter other than shell.</p>
 			        	</div>
