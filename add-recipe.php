@@ -55,7 +55,7 @@
 			        	<div class="controls">
 			          		<select name="interpreter" id="recipe-interpreter" class="span2" data-placeholder="">
 								<?php foreach($interpreters as $interpreter): ?>
-									<option value="<?= $interpreter ?>" <?php if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <?php endif; ?>><?= ucfirst($interpreter) ?></option>	
+									<option value="<?php $interpreter ?>" <?php if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <?php endif; ?>><?php ucfirst($interpreter) ?></option>	
 								<?php endforeach; ?>
 							</select>
 			          		<p class="help-block">The interpreter to execute the recipe with. If you wish to write scripts with control structures and functions select an interpreter other than shell.</p>
@@ -78,7 +78,7 @@
 			    	<div class="control-group">
 						<div class="controls">
 							<a class="btn btn-primary" id="add-recipe-submit" onclick="validate_add_recipe();"><i class="icon-ok-sign icon-white"></i> Add Recipe</a>
-							<a class="btn" href="<?= Links::render("recipes") ?>">Cancel</a>
+							<a class="btn" href="<?php Links::render("recipes") ?>">Cancel</a>
 						</div>
 			       </div>
 			    </fieldset>
