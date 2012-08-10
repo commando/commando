@@ -36,7 +36,7 @@ Right now installation is a bit involved and brutal, but once we iron out Comman
 
 **2.)** Execute `$ php -f install.php`, or view `/install.php` via a browser. *The install script requires write access to the filesystem to copy and update configuration files.*
 
-**3.)** Add the public and private SSH keys you wish to connect with into the `/keys` directory.
+**3.)** Add the public and private SSH keys you wish to connect with into the `/keys` directory. It is **highly recommend** to set the permission on both keys to `0400`; read only. Make sure the keys are owned by the user that executes PHP.
 
 **4.)** Edit `/app.config.php` and provide the correct paths for:
 
