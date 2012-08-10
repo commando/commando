@@ -159,6 +159,10 @@ Contact
 + commando@nodesocket.com
 + http://twitter.com/commando_io
 
+Sponsored By
+-------
+[NetDNA](http://netdna.com) - [@NetDNADeveloper](http://www.twitter.com/netdnadeveloper)
+
 License & Legal
 ---------------
 
