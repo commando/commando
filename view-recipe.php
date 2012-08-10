@@ -72,22 +72,22 @@
     <div class="container">
            
       <div>
-      	 <h1 class="header" style="float: left;"><?= $recipe->name ?></h1> 
+      	 <h1 class="header" style="float: left;"><?php echo $recipe->name ?></h1> 
      	 
      	 <div style="float: right;">
-     	 	 <a class="btn btn-large disabled"><?= substr($recipe->version, 0, 10) ?><?php if($recipe->recipe_version === $head->recipe_version): ?> (HEAD)<?php endif; ?></a>
+     	 	 <a class="btn btn-large disabled"><?php echo substr($recipe->version, 0, 10) ?><?php if($recipe->recipe_version === $head->recipe_version): ?> (HEAD)<?php endif; ?></a>
      	 </div>
       </div>
       
       <div class="row">
    	  	<div class="span12 well">
       		<?php if($recipe->recipe_version === $head->recipe_version): ?>
-      			<a href="<?= Links::render("edit-recipe", array($recipe->id)) ?>" class="btn btn-primary btn-large"><i class="icon-edit icon-white"></i> Edit Recipe</a>
-      			<a id="delete-recipe" href="/actions/delete_recipe.php?id=<?= $recipe->id ?>" class="btn btn-large"><i class="icon-remove"></i> Delete Recipe</a>
+      			<a href="<?php echo Links::render("edit-recipe", array($recipe->id)) ?>" class="btn btn-primary btn-large"><i class="icon-edit icon-white"></i> Edit Recipe</a>
+      			<a id="delete-recipe" href="/actions/delete_recipe.php?id=<?php echo $recipe->id ?>" class="btn btn-large"><i class="icon-remove"></i> Delete Recipe</a>
       		<?php else: ?>
       			<div class="alert alert-info no-bottom-margin">
 					<h4>Notice!</h4>
-					You are viewing an <strong><u>old version</u></strong> of this recipe. Only the <strong><u>head</u></strong> version of recipes may be edited. If you would like to make modifications to this recipe, navigate to the <a href="<?= Links::render("view-recipe", array($recipe->id)) ?>">head</a>.
+					You are viewing an <strong><u>old version</u></strong> of this recipe. Only the <strong><u>head</u></strong> version of recipes may be edited. If you would like to make modifications to this recipe, navigate to the <a href="<?php echo Links::render("view-recipe", array($recipe->id)) ?>">head</a>.
 	  			</div>
 	  		<?php endif; ?>
       	</div>
@@ -97,20 +97,20 @@
     	<div class="span12 well">
 			<div id="recipe-notes" class="alert alert-grey fade in" <?php if(empty($recipe->notes)): ?>style="display: none;"<?php endif; ?>>
 				 <a class="close" data-dismiss="alert">&times;</a>
-				 <?= Markdown($recipe->notes) ?>
+				 <?php echo Markdown($recipe->notes) ?>
 			</div>
 			<div class="navbar navbar-static">
             	<div class="navbar-inner">
               		<div class="container" style="width: auto;">
-                		<a class="brand"><?= ucfirst($recipe->interpreter) ?></a>
+                		<a class="brand"><?php echo ucfirst($recipe->interpreter) ?></a>
                			<ul class="nav">
 		                	<li class="divider-vertical"></li>
 		                	<li>
-		                		<a><?= $recipe->lines ?> <?php echo $recipe->lines == 1 ? 'line' : 'lines'; ?> / <?= $recipe->length ?></a>
+		                		<a><?php echo $recipe->lines ?> <?php echo $recipe->lines == 1 ? 'line' : 'lines'; ?> / <?php echo $recipe->length ?></a>
 		                	</li>
 		                	<li class="divider-vertical"></li>
 		                	<li>
-		                		<a>Added: <?= $recipe->added ?></a>
+		                		<a>Added: <?php echo $recipe->added ?></a>
 		                	</li>
                 		</ul>
                 		<ul class="navbar-form nav pull-right">
@@ -127,7 +127,7 @@
 												}
 											?>
 
-										" <?php if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?= substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<?php endif; ?></option>
+										" <?php if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?php echo substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<?php endif; ?></option>
 									<?php endforeach; ?>
 								</select>
                 			</li>
@@ -135,7 +135,7 @@
               		</div>
             	</div>
           	</div>
-			<pre class="prettyprint <?= $code_pretty_lang ?> linenums"><?= $recipe->content ?></pre>
+			<pre class="prettyprint <?php echo $code_pretty_lang ?> linenums"><?php echo $recipe->content ?></pre>
 		</div>
 	  </div>   
 <?php

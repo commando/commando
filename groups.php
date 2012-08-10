@@ -105,13 +105,13 @@
 			</div>
 			<div class="row">
 				<?php foreach($groups as $group): ?>
-		    		<div class="span4 well group" id="<?php echo $group->id; ?>" data-content="<?= $group->servers; ?>" data-title="Servers In Group">
+		    		<div class="span4 well group" id="<?php echo $group->id; ?>" data-content="<?php echo $group->servers; ?>" data-title="Servers In Group">
 						<a class="close delete-group">&times;</a>
 		         		<h3>
 		         			<?php if($group->servers_count > 0): ?>
-		         				<a class="btn btn-primary btn-mini disabled" style="margin-right: 10px;"><?= $group->servers_count ?></a>
+		         				<a class="btn btn-primary btn-mini disabled" style="margin-right: 10px;"><?php echo $group->servers_count ?></a>
 		         			<?php endif; ?>
-		         			<a><?= strtoupper($group->name) ?></a>
+		         			<a><?php echo strtoupper($group->name) ?></a>
 		         		</h3>
 		       		</div>
 				<?php endforeach; ?>
