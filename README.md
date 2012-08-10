@@ -71,17 +71,19 @@ Right now installation is a bit involved and brutal, but once we iron out Comman
 
 **12.)** Edit `/classes/MongoConfiguration.php` and provide the connection details to MongoDB.
 
-**(OPTIONAL)** 13.)** This step is not required, but if you want to enable pretty links you must setup rewrite rules on the web-server:
-
-Example:
+**13.)** *(OPTIONAL)* This step is not required, but if you want to enable pretty links you must setup rewrite rules on the web-server:
 
 Pretty Links enabled:
 
-`/view-recipe/rec_c4Bb4E01Q0d8a37N4bU37`
+````
+/view-recipe/rec_c4Bb4E01Q0d8a37N4bU37
+````
 
 Pretty links disabled:
 
-`/view-recipe.php?param1=rec_c4Bb4E01Q0d8a37N4bU37`
+````
+/view-recipe.php?param1=rec_c4Bb4E01Q0d8a37N4bU37
+````
 
 ##### nginx #####
 ```` nginx
