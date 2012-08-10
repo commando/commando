@@ -1,8 +1,5 @@
 ## CHANGELOG
 
-### Version 0.2.5 (open source) - *08/10/2012*
-- Short PHP echo tags `<?=` replaced with full definitions `<?php echo` in the entire application for maximum compatibility with different `php.ini` configurations.
-
 ### Version 0.2.4 (open source) - *08/09/2012*
 - Fixed bugs in `/classes/Links.php` dealing with auto-detecting pretty links. The code is quite nasty, if you know of a more elegant solution please submit a pull request.
 

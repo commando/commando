@@ -501,8 +501,7 @@
 		
 		public static function get_recipe_versions($recipe_id) {
 			$SQL = "SELECT `id`,
-						   version,
-						   CONVERT_TZ(added, '+00:00', " . MySQLConnection::smart_quote(Functions::get_timezone_offset()). ") AS added
+						   version
 			          FROM recipe_versions
 			         WHERE recipe = " . MySQLConnection::smart_quote($recipe_id) . "
 			      ORDER BY added DESC";

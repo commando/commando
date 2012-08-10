@@ -41,8 +41,6 @@
 		$recipe_versions[] = $row;
 	}
 	
-	$recipe_versions = Functions::format_dates($recipe_versions);
-	
 	//Calculate Statistics
 	$recipe->lines = (substr_count($recipe->content, "\n") + 1);
 	$recipe->length = Functions::formatBytes(strlen($recipe->content));
@@ -74,38 +72,22 @@
     <div class="container">
            
       <div>
-<<<<<<< HEAD
       	 <h1 class="header" style="float: left;"><?php $recipe->name ?></h1> 
      	 
      	 <div style="float: right;">
      	 	 <a class="btn btn-large disabled"><?php substr($recipe->version, 0, 10) ?><?php if($recipe->recipe_version === $head->recipe_version): ?> (HEAD)<?php endif; ?></a>
-=======
-      	 <h1 class="header" style="float: left;"><?php echo $recipe->name ?></h1> 
-     	 
-     	 <div style="float: right;">
-     	 	 <a class="btn btn-large disabled"><?php echo substr($recipe->version, 0, 10) ?><?php if($recipe->recipe_version === $head->recipe_version): ?> (HEAD)<?php endif; ?></a>
->>>>>>> Version bump 0.2.5. See CHANGELOG.md
      	 </div>
       </div>
       
       <div class="row">
    	  	<div class="span12 well">
       		<?php if($recipe->recipe_version === $head->recipe_version): ?>
-<<<<<<< HEAD
       			<a href="<?php Links::render("edit-recipe", array($recipe->id)) ?>" class="btn btn-primary btn-large"><i class="icon-edit icon-white"></i> Edit Recipe</a>
       			<a id="delete-recipe" href="/actions/delete_recipe.php?id=<?php $recipe->id ?>" class="btn btn-large"><i class="icon-remove"></i> Delete Recipe</a>
       		<?php else: ?>
       			<div class="alert alert-info no-bottom-margin">
 					<h4>Notice!</h4>
 					You are viewing an <strong><u>old version</u></strong> of this recipe. Only the <strong><u>head</u></strong> version of recipes may be edited. If you would like to make modifications to this recipe, navigate to the <a href="<?php Links::render("view-recipe", array($recipe->id)) ?>">head</a>.
-=======
-      			<a href="<?php echo Links::render("edit-recipe", array($recipe->id)) ?>" class="btn btn-primary btn-large"><i class="icon-edit icon-white"></i> Edit Recipe</a>
-      			<a id="delete-recipe" href="/actions/delete_recipe.php?id=<?php echo $recipe->id ?>" class="btn btn-large"><i class="icon-remove"></i> Delete Recipe</a>
-      		<?php else: ?>
-      			<div class="alert alert-info no-bottom-margin">
-					<h4>Notice!</h4>
-					You are viewing an <strong><u>old version</u></strong> of this recipe. Only the <strong><u>head</u></strong> version of recipes may be edited. If you would like to make modifications to this recipe, navigate to the <a href="<?php echo Links::render("view-recipe", array($recipe->id)) ?>">head</a>.
->>>>>>> Version bump 0.2.5. See CHANGELOG.md
 	  			</div>
 	  		<?php endif; ?>
       	</div>
@@ -115,16 +97,11 @@
     	<div class="span12 well">
 			<div id="recipe-notes" class="alert alert-grey fade in" <?php if(empty($recipe->notes)): ?>style="display: none;"<?php endif; ?>>
 				 <a class="close" data-dismiss="alert">&times;</a>
-<<<<<<< HEAD
 				 <?php Markdown($recipe->notes) ?>
-=======
-				 <?php echo Markdown($recipe->notes) ?>
->>>>>>> Version bump 0.2.5. See CHANGELOG.md
 			</div>
 			<div class="navbar navbar-static">
             	<div class="navbar-inner">
               		<div class="container" style="width: auto;">
-<<<<<<< HEAD
                 		<a class="brand"><?php ucfirst($recipe->interpreter) ?></a>
                			<ul class="nav">
 		                	<li class="divider-vertical"></li>
@@ -134,17 +111,6 @@
 		                	<li class="divider-vertical"></li>
 		                	<li>
 		                		<a>Added: <?php $recipe->added ?></a>
-=======
-                		<a class="brand"><?php echo ucfirst($recipe->interpreter) ?></a>
-               			<ul class="nav">
-		                	<li class="divider-vertical"></li>
-		                	<li>
-		                		<a><?php echo $recipe->lines ?> <?php echo $recipe->lines == 1 ? 'line' : 'lines'; ?> / <?php echo $recipe->length ?></a>
-		                	</li>
-		                	<li class="divider-vertical"></li>
-		                	<li>
-		                		<a>Added: <?php echo $recipe->added ?></a>
->>>>>>> Version bump 0.2.5. See CHANGELOG.md
 		                	</li>
                 		</ul>
                 		<ul class="navbar-form nav pull-right">
@@ -161,11 +127,7 @@
 												}
 											?>
 
-<<<<<<< HEAD
 										" <?php if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?php substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<?php endif; ?></option>
-=======
-										" <?php if($recipe_version->id === $recipe->recipe_version) { echo 'selected="selected"'; } ?>><?php echo substr($recipe_version->version, 0, 10) ?><?php if($recipe_version->id === $head->recipe_version): ?> (HEAD)<?php endif; ?></option>
->>>>>>> Version bump 0.2.5. See CHANGELOG.md
 									<?php endforeach; ?>
 								</select>
                 			</li>
@@ -173,11 +135,7 @@
               		</div>
             	</div>
           	</div>
-<<<<<<< HEAD
 			<pre class="prettyprint <?php $code_pretty_lang ?> linenums"><?php $recipe->content ?></pre>
-=======
-			<pre class="prettyprint <?php echo $code_pretty_lang ?> linenums"><?php echo $recipe->content ?></pre>
->>>>>>> Version bump 0.2.5. See CHANGELOG.md
 		</div>
 	  </div>   
 <?php
