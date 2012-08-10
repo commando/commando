@@ -73,7 +73,7 @@ Right now installation is a bit involved and brutal, but once we iron out Comman
 
 **13.)** *(OPTIONAL)* This step is not required, but if you want to enable pretty links you must setup rewrite rules on the web-server:
 
-Pretty Links enabled:
+Pretty links enabled:
 
 ````
 /view-recipe/rec_c4Bb4E01Q0d8a37N4bU37
