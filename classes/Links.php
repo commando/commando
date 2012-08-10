@@ -28,12 +28,15 @@
 			//
 			// There may be a better way to do this. Do you know?
 			////
-			if(isset($_SERVER['REQUEST_URI']) && isset($_SERVER['HTTP_REFERER']) && $_SERVER['REQUEST_URI'] !== "/" && $_SERVER['HTTP_REFERER'] !== "/") {
-				if(strpos($_SERVER['HTTP_REFERER'], ".php") === false) {
+			if(isset($_SERVER['REQUEST_URI']) && isset($_SERVER['HTTP_REFERER']) && isset($_SERVER['HTTP_HOST']) && $_SERVER['REQUEST_URI'] !== "/") {
+				//Remove http or https from $_SERVER['HTTP_REFERER']
+				$referer = rtrim(str_replace(array("http://", "https://"), "", $_SERVER['HTTP_REFERER']), "/");
+				
+				if($referer !== $_SERVER['HTTP_HOST'] && strpos($_SERVER['HTTP_REFERER'], ".php") === false) {
 					Links::$pretty = true;
 				}
 			}
-				
+
 			if(Links::$pretty) {
 				if(count($query_params) > 0) {
 					return $page . "/" . implode("/", $query_params);
