@@ -85,11 +85,11 @@
 		        	<div class="controls">
 		          		<select id="execute-groups" name="groups" multiple="multiple" class="span4" data-placeholder="Select groups…">
 		          			<?php if(count($servers_in_default_group) > 0): ?>
-		          				<option value="">- DEFAULT - (<?php count($servers_in_default_group) ?>)</option>
+		          				<option value="">- DEFAULT - (<?= count($servers_in_default_group) ?>)</option>
 		          			<?php endif; ?>
 		          			<?php foreach($groups as $group): ?>
 		          				<?php if($group->servers_count > 0): ?>
-		          					<option value="<?php $group->id ?>"><?php $group->name ?> (<?php $group->servers_count ?>)</option>
+		          					<option value="<?= $group->id ?>"><?= $group->name ?> (<?= $group->servers_count ?>)</option>
 		          				<?php endif; ?>
 		          			<?php endforeach; ?>	
 		          		</select>
@@ -102,7 +102,7 @@
 		          		<select class="span3" id="execute-recipe" name="recipe" data-placeholder="Select a recipe...">
 		          			<option value=""></option>
 		          			<?php foreach($recipes as $recipe): ?>
-		          				<option value="<?php $recipe->id ?>"><?php $recipe->name; ?></option>
+		          				<option value="<?= $recipe->id ?>"><?= $recipe->name; ?></option>
 		          			<?php endforeach; ?>	
 		          		</select>
 		          		<p class="help-block">The recipe to execute.</p>

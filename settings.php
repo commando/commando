@@ -51,7 +51,7 @@
 			<form id="form-settings" class="well form-horizontal" method="post" action="/actions/edit_settings.php">
 		    	 <?php if(isset($settings->modified)): ?>
 		    	 	<div style="float: right;">
-		    	 		<a class="btn disabled">Modified <?php $settings->modified ?></a>
+		    	 		<a class="btn disabled">Modified <?= $settings->modified ?></a>
 		    	 	</div>
 		    	 <?php endif; ?>
 		    	 <fieldset>
@@ -79,7 +79,7 @@
 			        	<div class="controls">
 			          		<select name="default_interpreter" id="default-interpreter" class="span2" data-placeholder="">
 								<?php foreach($interpreters as $interpreter): ?>
-									<option value="<?php $interpreter ?>" <?php if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <?php endif; ?>><?php ucfirst($interpreter) ?></option>	
+									<option value="<?= $interpreter ?>" <?php if(isset($settings->data->default_interpreter) && $interpreter === $settings->data->default_interpreter): ?>selected="selected" <?php endif; ?>><?= ucfirst($interpreter) ?></option>	
 								<?php endforeach; ?>
 							</select>
 			          		<p class="help-block">The default interpreter that is pre-filled when adding a new recipe.</p>
