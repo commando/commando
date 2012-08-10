@@ -122,6 +122,14 @@ Version **5.0** or greater running the **InnoDB** storage engine. *MyISAM is NOT
 #### MongoDB ####
 Version **2.0** or greater is highly recommended. Older versions of MongoDB may work.
 
+Current Version
+---------------
+#### (https://github.com/nodesocket/commando/blob/master/VERSION) ####
+
+Changelog
+---------
+#### (https://github.com/nodesocket/commando/blob/master/CHANGELOG.md) ####
+
 Support, Bugs, And Feature Requests
 -----------------------
 
