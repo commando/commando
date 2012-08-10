@@ -43,8 +43,11 @@
       
 	  <div class="row">
    	  	<div class="span12 well">
+<<<<<<< HEAD
       		<a href="<?php Links::render("add-recipe") ?>" class="btn btn-primary btn-large"><i class="icon-plus-sign icon-white"></i> Add Recipe</a>
+=======
       		<a href="<?php echo Links::render("add-recipe") ?>" class="btn btn-primary btn-large"><i class="icon-plus-sign icon-white"></i> Add Recipe</a>
+>>>>>>> Version bump 0.2.5. See CHANGELOG.md
       	</div>
       </div>
       
@@ -56,8 +59,11 @@
 	  	  		Recipes are containers of commands that are fully versioned. Recipes can be written in pure <i><strong>shell</strong></i>, <i><strong>bash</strong></i>, <i><strong>perl</strong></i>, <i><strong>python</strong></i>, or <i><strong>node.js</strong></i>.
       		  </div>
 		      <div id="no-recipes" class="alert alert-grey no-bottom-margin" <?php if(count($recipes) > 0): ?>style="display: none;"<?php endif; ?>>
+<<<<<<< HEAD
 		      	No recipes added. <a href="<?php Links::render("add-recipe") ?>">Add</a> a recipe now.
+=======
 		      	No recipes added. <a href="<?php echo Links::render("add-recipe") ?>">Add</a> a recipe now.
+>>>>>>> Version bump 0.2.5. See CHANGELOG.md
 			  </div>
 	      	  <?php if(count($recipes) > 0): ?>
 		      	  <div id="table-container">
@@ -79,6 +85,7 @@
 				      	</thead>
 				      	<tbody>
 			      			<?php foreach($recipes as $recipe): ?>	
+<<<<<<< HEAD
 			      				<tr id="<?php $recipe->id ?>" class="recipe">
 				      				<td><input type="checkbox" class="recipe-delete-check" value="<?php $recipe->id ?>" /></td>
 				      				<td><a href="<?php Links::render("view-recipe", array($recipe->id)) ?>"><?php $recipe->name ?></a></td>
@@ -86,6 +93,7 @@
 				      				<td><span class="badge"><?php $recipe->number_of_versions ?></span></td>
 				      				<td><?php $recipe->added ?></td>
 				      				<td><?php $recipe->modified ?></td>
+=======
 			      				<tr id="<?php echo $recipe->id ?>" class="recipe">
 				      				<td><input type="checkbox" class="recipe-delete-check" value="<?php echo $recipe->id ?>" /></td>
 				      				<td><a href="<?php echo Links::render("view-recipe", array($recipe->id)) ?>"><?php echo $recipe->name ?></a></td>
@@ -93,6 +101,7 @@
 				      				<td><span class="badge"><?php echo $recipe->number_of_versions ?></span></td>
 				      				<td><?php echo $recipe->added ?></td>
 				      				<td><?php echo $recipe->modified ?></td>
+>>>>>>> Version bump 0.2.5. See CHANGELOG.md
 			      				</tr>
 			      			<?php endforeach; ?>
 				      	</tbody>
