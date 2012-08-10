@@ -124,11 +124,11 @@ Version **2.0** or greater is highly recommended. Older versions of MongoDB may 
 
 Current Version
 ---------------
-#### (https://github.com/nodesocket/commando/blob/master/VERSION) ####
+#### https://github.com/nodesocket/commando/blob/master/VERSION ####
 
 Changelog
 ---------
-#### (https://github.com/nodesocket/commando/blob/master/CHANGELOG.md) ####
+#### https://github.com/nodesocket/commando/blob/master/CHANGELOG.md ####
 
 Support, Bugs, And Feature Requests
 -----------------------
