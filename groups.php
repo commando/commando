@@ -105,6 +105,7 @@
 			</div>
 			<div class="row">
 				<?php foreach($groups as $group): ?>
+<<<<<<< HEAD
 		    		<div class="span4 well group" id="<?php echo $group->id; ?>" data-content="<?php $group->servers; ?>" data-title="Servers In Group">
 						<a class="close delete-group">&times;</a>
 		         		<h3>
@@ -112,6 +113,15 @@
 		         				<a class="btn btn-primary btn-mini disabled" style="margin-right: 10px;"><?php $group->servers_count ?></a>
 		         			<?php endif; ?>
 		         			<a><?php strtoupper($group->name) ?></a>
+=======
+		    		<div class="span4 well group" id="<?php echo $group->id; ?>" data-content="<?php echo $group->servers; ?>" data-title="Servers In Group">
+						<a class="close delete-group">&times;</a>
+		         		<h3>
+		         			<?php if($group->servers_count > 0): ?>
+		         				<a class="btn btn-primary btn-mini disabled" style="margin-right: 10px;"><?php echo $group->servers_count ?></a>
+		         			<?php endif; ?>
+		         			<a><?php echo strtoupper($group->name) ?></a>
+>>>>>>> Version bump 0.2.5. See CHANGELOG.md
 		         		</h3>
 		       		</div>
 				<?php endforeach; ?>

@@ -226,15 +226,25 @@
 				</ul>
 				<div class="row">
 				<?php foreach($group_servers as $server): ?>
+<<<<<<< HEAD
 		    		<div class="span4 well server" id="<?php echo $server->id; ?>" data-address="<?php $server->address ?>" data-port="<?php $server->ssh_port ?>" data-username="<?php $server->ssh_username ?>">						
+=======
+		    		<div class="span4 well server" id="<?php echo $server->id; ?>" data-address="<?php echo $server->address ?>" data-port="<?php echo $server->ssh_port ?>" data-username="<?php echo $server->ssh_username ?>">						
+>>>>>>> Version bump 0.2.5. See CHANGELOG.md
 						<div class="ssh-progress progress progress-striped active">
 			         		<div class="bar" style="width: 100%;"></div>
 						</div>
 						
 						<a class="close delete-server">&times;</a>
+<<<<<<< HEAD
 		         		<h2><a><?php strtoupper($server->label) ?></a></h2>
 						
 		         		<h4 class="grey"><?php $server->ssh_username ?>@<?php $server->address ?>:<?php $server->ssh_port ?></h4>
+=======
+		         		<h2><a><?php echo strtoupper($server->label) ?></a></h2>
+						
+		         		<h4 class="grey"><?php echo $server->ssh_username ?>@<?php echo $server->address ?>:<?php echo $server->ssh_port ?></h4>
+>>>>>>> Version bump 0.2.5. See CHANGELOG.md
 		         		
 		         		
 		         		<?php if(!empty($server->tags)): ?>
