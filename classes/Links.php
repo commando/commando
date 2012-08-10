@@ -23,6 +23,17 @@
 				$page = "/" . $page;
 			}
 			
+			////
+			// Fix for actions, look for '.php' in the referer
+			//
+			// There may be a better way to do this. Do you know?
+			////
+			if(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])) {
+				if(strpos($_SERVER['HTTP_REFERER'], ".php") === false) {
+					Links::$pretty = true;
+				}
+			}
+				
 			if(Links::$pretty) {
 				if(count($query_params) > 0) {
 					return $page . "/" . implode("/", $query_params);
