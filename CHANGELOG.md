@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+### Version 0.2.4 (open source) - *08/09/2012*
+- Fixed bugs in `/classes/Links.php` dealing with auto-detecting pretty links. The code is quite nasty, if you know of a more elegant solution please submit a pull request.
+
 ### Version 0.2.3 (open source) - *08/09/2012*
 - Fixed bug in `/classes/Links.php` where if using pretty links, any request inside of the `/actions` directory would cause pretty links to disable.
 
