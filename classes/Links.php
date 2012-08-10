@@ -29,8 +29,8 @@
 			// There may be a better way to do this. Do you know?
 			////
 			if(isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])) {
-				if(strpos($_SERVER['HTTP_REFERER'], ".php") === false) {
-					Links::$pretty = true;
+				if(strpos($_SERVER['HTTP_REFERER'], ".php") === true) {
+					Links::$pretty = false;
 				}
 			}
 				
