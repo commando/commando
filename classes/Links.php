@@ -28,7 +28,7 @@
 			//
 			// There may be a better way to do this. Do you know?
 			////
-			if(isset($_SERVER['REQUEST_URI']) && isset($_SERVER['HTTP_REFERER']) && $_SERVER['REQUEST_URI'] !== "/") {
+			if(isset($_SERVER['REQUEST_URI']) && isset($_SERVER['HTTP_REFERER']) && $_SERVER['REQUEST_URI'] !== "/" && $_SERVER['HTTP_REFERER'] !== "/") {
 				if(strpos($_SERVER['HTTP_REFERER'], ".php") === false) {
 					Links::$pretty = true;
 				}
