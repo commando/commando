@@ -17,10 +17,11 @@
 	
  	class Requires {
  		static function autoload() {
+ 			require_once(dirname(__DIR__) . "/classes/Error.php");
  			require_once(dirname(__DIR__) . "/app.config.php");
  			
  			spl_autoload_register(function($class_name) {
- 				require(dirname(__DIR__) . "/classes/" . $class_name . ".php");
+ 				require_once(dirname(__DIR__) . "/classes/" . $class_name . ".php");
 			});
  		}
  	}

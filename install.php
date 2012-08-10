@@ -31,7 +31,7 @@
 		$app_config = file_get_contents(__DIR__ . "/app.config.php");
 		
 		if($app_config !== false) {
-			if(file_put_contents(__DIR__ . "/app.config.php", str_replace("{{CRYPTO_SEED}}", Functions::generate_random(64), $app_config)) !== false) {
+			if(file_put_contents(__DIR__ . "/app.config.php", str_replace("{{CRYPTO_SEED}}", Functions::generate_random(40), $app_config)) !== false) {
 				print "-> Wrote randomly generated CRYPTO_SEED to '/app.config.php'.\n";
 			}
 		}
