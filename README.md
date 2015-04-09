@@ -1,4 +1,4 @@
-![Commando.io](https://static.commando.io/img/foo.png)
+![Commando.io](https://static.commando.io/img/commando.png)
 
 No Longer Maintained
 ---------------------------------------------
